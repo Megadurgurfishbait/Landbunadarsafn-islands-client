@@ -1,0 +1,103 @@
+.frontpage {
+      margin-top: 80px;
+
+      
+      &--chosen {
+
+            display:inline;
+            color: black;
+
+
+            
+            &__title {
+                  font-size: 24px;
+                  padding: 1.5rem 0;
+                  
+            }
+            &__picturecontainer {
+                  width: 100%;
+                  height: 250px;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-evenly;
+                  margin-bottom: 4rem;
+                  background-color: gray;
+                  &-button {
+                        height: 200px;
+                        width: 200px;
+                        padding: 1rem;
+                        display: block;
+                        border-radius: 5%;
+                        & > button {
+
+                              border-radius: 5%;
+                              padding: 0 1rem;
+                        }
+                        &-img {
+                              width: 200px;
+                              height: 200px;
+                              object-fit: scale-down;
+                        }
+                  }
+            }
+      }
+
+      &--choose {
+            margin-top: 4rem;
+            display:block;
+            &__container {
+                  display: flex;
+                  flex-flow: wrap row;
+                  width: 100%;
+                  height: 100%;
+                  justify-content: space-around;
+                  background-color: gray;
+                  text-align: center;
+                  overflow: hidden;
+                  padding: 1.5rem;
+                  &-card {
+                        display: block;
+                        height: 250px;
+                        width: 250px;
+                       padding: 1rem;
+                       position: relative;
+                       margin: .6rem 1rem;
+                       border-radius: 5%;
+
+                       &-img {
+                        position: relative;
+                        top: 0;
+                        z-index: 4;
+                        object-fit: contain;
+                        width: 100%;
+                        height: inherit;
+
+                       }
+
+                       &-label {
+                        border-radius: 2%;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        z-index: 5;
+                        overflow: hidden;
+                        cursor: pointer;
+                       }
+                       &-input {
+                              display: none;
+                              &:checked + .frontpage--choose__container-card-label{
+                                    background-color: rgba(0, 0, 0, 0.274);
+                                    overflow: hidden;
+                              }
+                       }
+                  }
+            }
+      }
+      &--button {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 5vh;
+      }
+}

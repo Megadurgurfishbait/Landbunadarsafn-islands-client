@@ -1,0 +1,50 @@
+.myModal {
+      position: fixed; /* Stay in place */
+      z-index: 50; /* Sit on top */
+      left: 0;
+      top: 0;
+      padding: 4rem;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+      &--headline {
+            text-align: center;
+            margin-bottom: 1rem;
+
+      }
+
+      &--display {
+            background-color: white;
+            margin: 0 auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Could be more or less, depending on screen size */
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            overflow: hidden;
+            border-radius: 0.5rem;
+
+            &__card {
+                  margin: 1rem 1rem;
+                  width: 30%;
+                  display: block;
+                  text-align: center;
+                  border-radius: 1rem;
+                  box-shadow: 2px 3px 1px 1px #efefef;
+                  background-color: rgba(0, 0, 0, 0.048);
+                  border: 3px solid rgba(0, 0, 0, 0.200);
+                  overflow: hidden;
+            }
+
+      }
+      &--btn {
+            text-align: center;
+      }
+
+
+
+}

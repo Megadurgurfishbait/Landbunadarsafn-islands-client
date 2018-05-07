@@ -1,0 +1,11 @@
+.posts {
+      
+      z-index: -1;
+      background-color: #fd0e35;
+      clip-path: polygon(0 -50%, 100% 0%, 100% 95%, 0% 150%);
+      
+}
+
+.relative {
+      filter: drop-shadow(0px 15px 4px rgba(0, 0, 0, 0.144));
+}

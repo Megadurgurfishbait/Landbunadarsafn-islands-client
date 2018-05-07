@@ -1,0 +1,80 @@
+.post {
+      width: 100vh;
+      background-color: #f9f9f9;
+      border: #f7f7f7 3px solid;
+      border-radius: 1rem;
+      padding: 0 2rem;
+      color: black;
+      height: 100%;
+      display: block;
+      flex: 1 0 55%;
+      &--btn {
+            flex-basis: 100%; display: flex;
+      }
+      & > a {
+            text-decoration: none;
+            font-size: 22px;
+      }
+      &--component {
+            margin: 2rem 0;
+
+            &__title {
+                  text-transform: uppercase;
+                  padding-top: 20px;
+                  padding-bottom: 15px;
+            }
+
+            &__date {
+                  font-weight: bold;
+                  font-size: 15px;
+            }
+
+            &__headingImage {
+                  float: left;
+                  margin: 0 20px 20px 0;
+                  max-width: 35%;
+            }
+
+            &__text {
+                  text-align: justify;
+                   text-indent: 2rem;
+                   white-space: pre-line;
+                   
+                   
+            }
+
+            &__picContainer {
+                  background-color: #f9f9f9;
+                  border: #f7f7f7 10px solid;
+                  border-radius: 1rem;
+                  padding: 0 2rem;
+                  display:flex;
+                  align-items: center;
+                  flex-direction: column;
+                  width: 30%;
+                  padding: 10px;
+                  margin-bottom: 30px;
+                  flex: 1 0 30%;
+
+                  
+                  &-map > img {
+                        max-width: 100%;
+                        margin-bottom: .41rem;
+                  }
+
+                  &-map > label {
+                        font-size: .5rem;
+                  }
+            }
+      }
+} 
+
+
+
+.post-container {
+      width: 100%;
+
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-top: 100px;
+}

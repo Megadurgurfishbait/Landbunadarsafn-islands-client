@@ -1,0 +1,25 @@
+.addEvent {
+      margin-top: 120px;
+      color: #fd0e35;
+
+
+      &--form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            & > label {
+                  padding: 1rem;
+            }
+
+            &__title {
+                  width: 40vw;
+            }
+
+            &__textarea {
+                  height: 200px;
+                  width: 40vw;
+            }
+      }
+
+}
