@@ -51,8 +51,9 @@ class Images extends Component{
             }
             return(
             <div>
+                  
               <div className="boom">
-                {/*<ImageSlider /> */}
+                <ImageSlider />
               </div>
               {posts ? this.renderMyLink(): <div> Loading</div>}
             </div>
