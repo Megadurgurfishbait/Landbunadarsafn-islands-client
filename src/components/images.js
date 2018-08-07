@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
-import { Link, browserHistory } from "react-router";
-import Post from './post';
+
 import Fetcher from './fetcher';
 import ImageSlider from './imageSlider';
-import Footer from './footer';
-import _ from 'lodash';
 import './images.scss';
 
 class Images extends Component{
@@ -31,16 +28,6 @@ class Images extends Component{
       renderMyEvents() {
             return <div>  <Fetcher path="event" array = {this.props.events} /></div>
       }
-
-
-         orderByDate(arr, dateProp) {
-
-                  return arr.slice().sort(function (a, b) {
-                    return a[dateProp] < b[dateProp] ? -1 : 1;
-                  });
-
-      }
-
 
       render() {
            const {posts, events} = this.props;
