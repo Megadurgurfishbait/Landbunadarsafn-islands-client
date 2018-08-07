@@ -11,7 +11,7 @@ import "./header.scss";
 
       renderLinks() {
 
-            if(this.props.authenticated){  
+            if(this.props.authenticated){
                   return  [
                   <li className="nav-item">
                         <Link className="nav-link color-white" to="/signout">Skra mig ut</Link>
@@ -33,26 +33,32 @@ import "./header.scss";
                   // Show a link to sign in or sign up.
                   return [
                         <li className="nav-item" key={1}>
-                              <Link className="nav-link color-white" to="/signin" > Sign in </Link>
+                          <Link className="nav-link color-white" to="/" > Forsíða </Link>
                         </li>,
                         <li className="nav-item" key={2}>
-                              <Link className="nav-link color-white" to="/signup" > Sign up </Link>
+                          <Link className="nav-link color-white" to="/frodleikur" > Fróðleikur </Link>
+                        </li>,
+                        <li className="nav-item" key={4}>
+                          <Link className="nav-link color-white" to="/opnunartimar" > Opnunartími </Link>
+                        </li>,
+                        <li className="nav-item" key={5}>
+                          <Link className="nav-link color-white" to="/english" > English </Link>
                         </li>
                   ];
             }
       }
 
        render() {
-             
+
              return (
                    <div className="header">
-                        <nav className="nav navbar-light color-white">
-                              <Link to="/" className="navbar-brand color-white"> Landbúnaðarsafn Íslands </Link>
-                              <ul className="nav navbar-nav ">
-                                    {this.renderLinks()}
-                              </ul>
-                              <div className="header__button"><img src={logo}/></div>
-                        </nav>
+                     <nav className="nav navbar-light color-white">
+                       <Link to="/" className="navbar-brand color-white"> Landbúnaðarsafn Íslands </Link>
+                       <ul className="nav navbar-nav ">
+                         {this.renderLinks()}
+                       </ul>
+                       {/*<div className="header__button"><img src={logo}/></div>
+                       */}</nav>
                    </div>
              )
        }
@@ -61,7 +67,7 @@ import "./header.scss";
 
 
  function mapStateToProps(state){
-       
+
        return {
              authenticated: state.auth.authenticated
        };

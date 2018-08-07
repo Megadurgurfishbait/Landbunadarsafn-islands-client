@@ -40,7 +40,7 @@ class Images extends Component{
                   });
 
       }
-      
+
 
       render() {
            const {posts, events} = this.props;
@@ -48,32 +48,26 @@ class Images extends Component{
             if(document.visibilityState === 'hidden'){
                   document.title = "HEY"
             }
-            if(events){
-                  var hello = this.orderByDate(this.props.events, "date");
-                  console.log(hello, "<-- Hér");
-             }
             }
             return(
             <div>
-                  <div className="boom">
-                        <ImageSlider />
-                  </div>
-                   {posts ? this.renderMyLink(): <div> Loading</div>}
-                   <h1> Viðburðir </h1>
-                   <Footer array={hello} />
+              <div className="boom">
+                {/*<ImageSlider /> */}
+              </div>
+              {posts ? this.renderMyLink(): <div> Loading</div>}
             </div>
             )
-      } 
-      
+      }
+
 
 }
 
 function mapStateToProps(state) {
-     
+
       return {
             posts: state.auth.posts,
             events : state.event.events
-      
+
       };
 }
 

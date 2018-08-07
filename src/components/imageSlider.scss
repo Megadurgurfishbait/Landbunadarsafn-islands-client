@@ -56,11 +56,12 @@
             text-align: left;
             font-size: 0;
             animation: slider infinite;
-            animation-duration: 50s;
-
+            animation-duration: 10000s;
+            object-fit: cover;
             & > img {
                   width: 20%;
                   float: left;
-            } 
+
+            }
       }
 }

@@ -14,7 +14,7 @@
      & > h3 {
       font-size: 18px;
       width: 100%;
-      
+
       }
       &--left {
             width: 33%;
@@ -24,16 +24,14 @@
                   font-size: 14px;
                   padding: 0;
                   margin: 0;
-                  text-align: none;     
+                  text-align: none;
             }
       }
-      
       &--middle {
             display: block;
             width: 33%;
             border-left: 1px pink solid;
             border-right: 1px pink solid;
-
             & > img {
                   width: 80%;
                   object-fit: none;
@@ -41,7 +39,6 @@
                   border-radius: 5px;
             }
       }
-
       &--right {
             width: 33%;
             display: block;
@@ -49,7 +46,4 @@
                   font-size: 14px;
             }
       }
-
-
-
 }

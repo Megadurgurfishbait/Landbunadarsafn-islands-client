@@ -20,6 +20,9 @@ import MyPictures from './components/myPictures';
 import frontpagePics from './components/frontpagePics';
 import addEvent from './components/addEvent';
 import changeArticle from './components/changeArticle';
+import knowledge from './components/knowledge';
+import English from './components/undirsidur/english';
+import Opnunartimi from './components/undirsidur/opnunartimar';
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 const token = localStorage.getItem('token');
@@ -31,19 +34,22 @@ if (token) {
 
 ReactDOM.render(
   <Provider store={store}>
-      <Router history={browserHistory}>
-            <Route path="/" component={App}>
-                  <IndexRoute component={images} /> 
-                  <Route path="addevent" component={addEvent} />
-                  <Route path="signin" component={signin}/>
-                  <Route path ="test" component={frontpagePics}/>
-                  <Route path="signout" component={Signout}/>
-                  <Route path="signup" component={Signup}/>
-                  <Route path="feature" component={RequireAuth(Feature)}/>
-                  <Route path="post/:id" component={Post} />
-                  <Route path="myndasafn" component={RequireAuth(MyPictures)}/>
-                  <Route path="changeArticle/:id" component={changeArticle}/>
-            </Route>
-      </Router>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={images} />
+        <Route path="addevent" component={addEvent} />
+        <Route path="signin" component={signin}/>
+        <Route path ="test" component={frontpagePics}/>
+        <Route path="signout" component={Signout}/>
+        <Route path="signup" component={Signup}/>
+        <Route path="feature" component={RequireAuth(Feature)}/>
+        <Route path="post/:id" component={Post} />
+        <Route path="myndasafn" component={RequireAuth(MyPictures)}/>
+        <Route path="changeArticle/:id" component={changeArticle}/>
+        <Route path="frodleikur" component={knowledge}/>
+        <Route path="english" component={English} />
+        <Route path="opnunartimar" component={Opnunartimi} />
+      </Route>
+    </Router>
   </Provider>
-  , document.querySelector('.container'));
+    , document.querySelector('.container'));

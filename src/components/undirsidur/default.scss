@@ -1,0 +1,15 @@
+.default {
+  color:black;
+  background-color: white;
+  min-height: 100vh;
+  padding: 2rem 2rem;
+  margin: 5rem 3rem;
+
+
+  &--paragraph {
+    text-align: justify;
+     text-indent: 2rem;
+     white-space: pre-line;
+     max-width: 60vw;
+  }
+}
