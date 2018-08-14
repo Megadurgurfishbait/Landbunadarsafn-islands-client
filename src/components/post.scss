@@ -1,62 +1,74 @@
 .post {
-      width: 100vh;
-      background-color: #f9f9f9;
-      border: #f7f7f7 3px solid;
-      border-radius: 1rem;
+      max-width: 50%;
+      background-color:rgba(255, 255, 255, 0.301);
+      border-top-left-radius: 5px;
       padding: 0 2rem;
       color: black;
       height: 100%;
-      display: block;
-      flex: 1 0 55%;
+      z-index: 1;
+
+      &-loading {      
+            max-width: 50%;
+            background-color: transparent;
+
+            padding: 0 2rem;
+            color: black;
+            height: 100vh;
+
+      }
       &--btn {
             flex-basis: 100%; display: flex;
       }
       & > a {
-            text-decoration: none;
-            font-size: 22px;
+            text-decoration: underline;
+            font-size: 20px;
+            font-weight: 500;
+            color: black;
+            margin: 2rem 0;
       }
       &--component {
-            margin: 2rem 0;
+            margin: 0.5rem 0;
 
             &__title {
                   text-transform: uppercase;
-                  padding-top: 20px;
-                  padding-bottom: 15px;
+                  padding-top: 10px;
+                  padding-bottom: 13px;
+                  font-size: 20px;
+                  font-weight: 500;
+                  line-height: 1.1;
             }
 
             &__date {
                   font-weight: bold;
-                  font-size: 15px;
+                  font-size: 13px;
             }
 
             &__headingImage {
                   float: left;
                   margin: 0 20px 20px 0;
-                  max-width: 35%;
+                  min-width: 35%;
             }
 
             &__text {
                   text-align: justify;
-                   text-indent: 2rem;
-                   white-space: pre-line;
-                   
+                  white-space: pre-line;
+                  font-size: 1.2rem;
                    
             }
 
             &__picContainer {
-                  background-color: #f9f9f9;
-                  border: #f7f7f7 10px solid;
-                  border-radius: 1rem;
+                  background-color:rgba(255, 255, 255, 0.301);
+                  border-top-right-radius: 5px;
+                  max-width: 50%;
                   padding: 0 2rem;
                   display:flex;
                   align-items: center;
                   flex-direction: column;
-                  width: 30%;
+                  width: 20vw;
                   padding: 10px;
                   margin-bottom: 30px;
-                  flex: 1 0 30%;
-
-                  
+                  color: black;
+                  z-index: 1;
                   &-map > img {
                         max-width: 100%;
                         margin-bottom: .41rem;
@@ -72,9 +84,9 @@
 
 
 .post-container {
-      width: 100%;
-
+      width: 100vw;
       display: inline-flex;
       flex-wrap: wrap;
-      margin-top: 100px;
+      justify-content: center;
+      margin: 5rem auto;
 }

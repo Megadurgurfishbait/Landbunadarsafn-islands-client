@@ -22,7 +22,6 @@ class SignUp extends Component {
 
   renderAlert(){
         if(this.props.errorMessage){
-        console.log(this.props.errorMessage);
         }
         if(this.props.errorMessage){
               return (

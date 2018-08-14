@@ -14,7 +14,6 @@ class Images extends Component{
       }
       componentWillMount(){
             this.props.fetchPost();
-           this.props.fetchEvents();
       }
 
       renderMyLink() {
@@ -31,16 +30,11 @@ class Images extends Component{
 
       render() {
            const {posts, events} = this.props;
-            {document.title = "Drasl"
-            if(document.visibilityState === 'hidden'){
-                  document.title = "HEY"
-            }
-            }
+
             return(
             <div>
                   
               <div className="boom">
-                <ImageSlider />
               </div>
               {posts ? this.renderMyLink(): <div> Loading</div>}
             </div>

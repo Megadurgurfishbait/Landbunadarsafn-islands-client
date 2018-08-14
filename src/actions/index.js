@@ -67,7 +67,7 @@ export function authError(error){
             payload: error
       }
 }
-
+/*
 export function showModal(){
       return function(dispatch){    
             dispatch({type: SHOW_IMAGES});
@@ -81,7 +81,7 @@ export function closeModal() {
             payload: false
       }
 }
-
+*/
 
 export function signoutUser() {
 
@@ -135,9 +135,9 @@ export function singlePost(id) {
       console.log("Action-Index-SinglePost", id);
       return function(dispatch){
             axios.get(`${ROOT_URL}/post/${id}`, {
-            
             })
             .then(response => {
+                  console.log("singlepost", response.data);
                   dispatch({
                         type: SINGLE_POST,
                         payload: response.data

@@ -14,7 +14,7 @@ import signin from './components/Auth/signin';
 import Feature from './components/Articles/feature';
 import RequireAuth from './components/Auth/require_auth';
 import { AUTH_USER } from './actions/types';
-import images from './components/Images';
+import images from './components/images';
 import Post from './components/post';
 import MyPictures from './components/myPictures';
 import frontpagePics from './components/frontpagePics';

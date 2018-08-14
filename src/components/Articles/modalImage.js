@@ -13,7 +13,6 @@ export default class ModalImage extends Component {
       onChange = (e) => {
             if(e.target.type === "checkbox"){
                   if(e.target.checked){
-                        console.log("her");
                         this.setState({className: "modalIamge--label--On"})
                   }else {
                         this.setState({className: ""})

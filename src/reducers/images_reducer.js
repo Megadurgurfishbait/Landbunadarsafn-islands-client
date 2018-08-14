@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import {
   ALL_IMAGES,
   DELETE_IMAGE,

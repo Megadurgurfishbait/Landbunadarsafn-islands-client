@@ -30,7 +30,7 @@ class MyPictures extends Component {
                   this.props.deleteImageChunks(values, callback => {
                         console.log("Gögnum eytt");
                   });
-                 window.location.reload();
+                alert("Myndum hefur verið eytt");
             })
       }
 

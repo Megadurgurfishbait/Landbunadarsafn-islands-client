@@ -5,7 +5,7 @@ import "./footer.scss";
 const Footer = (props) => 
       <div className="footer">
             <div className="footer--left">
-
+                  {/*
                   <ul>
                        {props.array ? 
 
@@ -19,7 +19,7 @@ const Footer = (props) =>
                        : <div>loading</div>}
                   </ul>
                   
-                  {/*
+                  
                   <h3>Önnur söfn </h3>
                   <li className="li"><a href="http://www.thjodminjasafn.is/"> Þjóðminjasafn Íslands</a></li>
                   <li className="li"><a href="http://www.gl-estrup.dk/dk/forside.aspx"> Dansk landbrugsmuseum </a></li>

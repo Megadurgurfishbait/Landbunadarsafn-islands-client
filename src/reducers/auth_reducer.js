@@ -27,6 +27,7 @@ export default function(state = {}, action) {
             console.log(action.payload);
                   return {...state, posts: action.payload};
             case SINGLE_POST:
+            console.log("reducer", action.payload[0]);
                   return {...state, post: action.payload[0]};
             case DELETE_POST:
                   return _.omit(state, action.payload);

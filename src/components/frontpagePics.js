@@ -39,7 +39,7 @@ class FrontpagePics extends Component {
 
       deleteImages = (e) => {
 
-            if (confirm('Ertu viss um að þú viljir eyða myndinni?')) {
+            if (window.confirm('Ertu viss um að þú viljir eyða myndinni?')) {
                   this.props.removeFrontpageImage(e.target.id, callback => {
                         alert("Myndinni hefur verið eytt");
                         window.location.reload();

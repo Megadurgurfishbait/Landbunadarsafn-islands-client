@@ -21,7 +21,7 @@ class componentName extends Component {
             this.setState({
                   [target.name] : name
             });
-            console.log(this.state);
+
       }
       handleDate = (e) => {
             this.setState({date: e.target.value});
@@ -40,7 +40,7 @@ class componentName extends Component {
       }
 
       render() {
-            console.log(this.props);
+
             return (
                   <div className="addEvent">
                         <form onSubmit={this.handleSubmit} className="addEvent--form">

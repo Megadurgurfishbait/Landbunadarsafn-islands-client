@@ -84,7 +84,7 @@ showModal = (e) => {
 
   sendArticle = () => {
       if(!this.state.text || !this.state.title){ return alert("Nauðsynlegt er að fylla út að minnsta kosti fyrirsögn og meginmál greinar.");}
-      console.log(this.state);
+
       this.props.sendPost({
             title: this.state.title,
             text: this.state.text,

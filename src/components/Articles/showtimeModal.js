@@ -7,7 +7,6 @@ class showtimeModal extends Component {
             this.props.onClose && this.props.onClose(e);
       }
       render() {
-            console.log(this.props);
             const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image";
             if(!this.props.show){
                   return null;

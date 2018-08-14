@@ -15,7 +15,6 @@ class Signin extends Component {
 
       // Gera ehv við email og password
       handleFormSubmit({email, password}) {
-            console.log(email, password);
 
             this.props.signInUser({email, password});
 

@@ -42,26 +42,25 @@
 }
 
 .slider {
-      position: relative;
-      overflow:hidden;
-      top: 0;
-      width: 100%;
-      max-height: 100vh;
 
-      & > figure {
+      max-height: 20vh;
+      display: block;
+      z-index: -1000;
+      & > img {
+            z-index: -1000;
+            min-height: 100%;
+            min-width: 100%;
+            width: auto;
+            height: auto;
+            max-width: none;
+            max-height: none;
+            display: block;
             position: relative;
-            width: 500%;
-            margin: 0;
-            left: 0;
-            text-align: left;
-            font-size: 0;
-            animation: slider infinite;
-            animation-duration: 50s;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -30%);
             object-fit: cover;
-            & > img {
-                  width: 20%;
-                  float: left;
 
-            }
+
       }
 }

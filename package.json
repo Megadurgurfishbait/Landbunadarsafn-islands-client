@@ -5,9 +5,10 @@
   "main": "index.js",
   "repository": "git@github.com:Megadurgurfishbait/hellomoto.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject"
   },
   "author": "",
   "license": "ISC",
@@ -24,9 +25,7 @@
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
     "style-loader": "^0.20.3",
-    "url-loader": "^1.0.1",
-    "webpack": "^1.15.0",
-    "webpack-dev-server": "^1.14.0"
+    "url-loader": "^1.0.1"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -44,9 +43,12 @@
     "react-responsive-carousel": "^3.1.41",
     "react-router": "^2.0.1",
     "react-router-dom": "^4.3.1",
+    "react-scripts": "^1.1.4",
     "redux": "^3.0.4",
     "redux-form": "^7.4.2",
     "redux-thunk": "^2.3.0",
-    "sass-loader": "^4.1.1"
+    "sass-loader": "^4.1.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^1.14.0"
   }
 }

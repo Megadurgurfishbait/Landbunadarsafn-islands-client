@@ -15,13 +15,12 @@ class ImageSlider extends React.Component {
       }
         return (
             <div className="slider">
-                  <figure>
+                  
                   {this.props.images.map(values => {
                   return (
                         <img src={`${ROOT_URL}/${values.imgLocation}`} />
                   );
             })}
-                  </figure>
             </div>
         );
     } 

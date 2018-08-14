@@ -2,17 +2,15 @@
 
       text-decoration: none;
       list-style: none;
-      display: flex;
-      flex-flow: row wrap;
+
       width:100%;
-      justify-content: space-around;
       height: 100%;
       overflow: visible;
       
       &--card {
             border-radius: 5px;
-           overflow: hidden;
-            margin: 40px 10px;
+            overflow: hidden;
+            margin: 2rem 1.5rem;
             background-color: white;
             width: 30vh;
             height: 40vh;
