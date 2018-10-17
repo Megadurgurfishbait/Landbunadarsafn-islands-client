@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import { Link, browserHistory } from 'react-router';
+import Portal from './Portal';
+import "../style/myStyles/_post.scss";
 
-import "./post.scss";
+
 
  class Post extends Component {
       
@@ -19,14 +21,10 @@ import "./post.scss";
       componentWillMount() {
             this.props.singlePost(this.props.params.id);
       }
-
       deleteMe(){
             this.props.deletePost(this.props.params.id, cb => {
                   browserHistory.push("/");
             });
-      }
-      changeArticle() {
-            
       }
 
       renderDeleteButton = () => {
@@ -56,8 +54,6 @@ import "./post.scss";
                   <div className="post-container">
                         <div className="post">
                               <div className="post--component">
-                                    <h1 className="post--component__title"> {this.props.post.title}</h1>
-                                    <p className="post--component__date">Birt þann {this.props.createdAt}</p>
                                     <img 
                                     className="post--component__headingImage"
                                     src={`${ROOT_URL}/${this.props.post.headingImg}`}
@@ -71,19 +67,37 @@ import "./post.scss";
                                     <p className="post--component__text">{this.props.post.text}</p> }
 
                               </div>
-                              <Link to="/"> Tilbaka á upphafssíðu </Link>
-                        </div>
-                        <div className="post--component__picContainer">
-                        <h4> Fylgimyndir fréttar</h4>
-                        {this.props.post.filePath.map(value => {
-                              return(<div className="post--component__picContainer-map"> <img 
-                              key={value}
-                              src={`${ROOT_URL}/${value}`}
-                              />
 
-                              </div>)
-                        })}
                         </div>
+                        
+                        <div className="post--component__picContainer">
+                        <Portal>
+                              <div className="post--component__title"> 
+                                    <h1>{this.props.post.title}</h1>
+                                    <h5>{this.props.post.createdAt}</h5>
+                              </div>
+                        </Portal>
+                        {console.log("Props", this.props.post.filePath.length)}
+                        {this.props.post.filePath.length != 0 ? <Fragment>
+                                                                                                <div className="post--component__textContainer">
+                                                                                                      <h4> Fylgimyndir fréttar</h4>
+                                                                                                </div>
+                                                                                                <div className="post--component__picContainer-map">
+                                                                                                { this.props.post.filePath.map(value => {
+                                                                                                      return(<div> 
+                                                                                                            <img 
+                                                                                                            key={value}
+                                                                                                            src={`${ROOT_URL}/${value}`}
+                                                                                                            />
+
+                                                                                                      </div>)
+                                                                                                })}
+                                                                                                </div>
+                                                                                                </Fragment> 
+                                                                                          :null }
+                        <Link className="post--link" to="/"> <h4> Tilbaka á upphafssíðu </h4> </Link>
+                        </div>
+
                         {this.renderDeleteButton()}
                   </div>
             )

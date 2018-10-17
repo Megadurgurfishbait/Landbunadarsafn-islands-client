@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import logo from "../img/logo130.png"
-import "./header.scss";
 
+import "../style/myStyles/_header.scss";
 
 
  class Header extends Component {
@@ -32,17 +31,17 @@ import "./header.scss";
             }else {
                   // Show a link to sign in or sign up.
                   return [
-                        <li className="nav-item" key={1}>
-                          <Link className="nav-link color-white" to="/" > Forsíða </Link>
+                        <li className="links--item" key={1}>
+                          <Link className="links--item__a color-white" to="/" > Forsíða </Link>
                         </li>,
-                        <li className="nav-item" key={2}>
-                          <Link className="nav-link color-white" to="/frodleikur" > Fróðleikur </Link>
+                        <li className="links--item" key={2}>
+                          <Link className="links--item__a color-white" to="/frodleikur" > Fróðleikur </Link>
                         </li>,
-                        <li className="nav-item" key={4}>
-                          <Link className="nav-link color-white" to="/opnunartimar" > Opnunartími </Link>
+                        <li className="links--item" key={4}>
+                          <Link className="links--item__a color-white" to="/opnunartimar" > Opnunartími </Link>
                         </li>,
-                        <li className="nav-item" key={5}>
-                          <Link className="nav-link color-white" to="/english" > English </Link>
+                        <li className="links--item" key={5}>
+                          <Link className="links--item__a color-white" to="/english" > English </Link>
                         </li>
                   ];
             }
@@ -52,13 +51,15 @@ import "./header.scss";
 
              return (
                    <div className="header">
-                     <nav className="nav navbar-light color-white">
-                       <Link to="/" className="navbar-brand color-white"> Landbúnaðarsafn Íslands </Link>
-                       <ul className="nav navbar-nav ">
+                     <nav className="header---container">
+                       <Link to="/" className="header--block">
+                       <img src="https://fierce-plateau-26257.herokuapp.com/image/84aa59c5182c189203db409762919c1d.jpg" width="64" height="64"  />
+                              Landbúnaðarsafn Íslands 
+                        </Link>
+                        </nav>
+                       <ul className="links ">
                          {this.renderLinks()}
                        </ul>
-                       {/*<div className="header__button"><img src={logo}/></div>
-                       */}</nav>
                    </div>
              )
        }

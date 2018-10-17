@@ -23,6 +23,7 @@ export default function(state = {}, action) {
                   return {...state, frontpageData: action.payload};
             case DELETE_FRONTPAGE_IMAGE:
                   return _.omit(state, action.payload);
+            
       }
       return state;
 }

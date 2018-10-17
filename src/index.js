@@ -23,6 +23,8 @@ import changeArticle from './components/changeArticle';
 import knowledge from './components/knowledge';
 import English from './components/undirsidur/english';
 import Opnunartimi from './components/undirsidur/opnunartimar';
+import Vefrit from './components/undirsidur/vefrit';
+import OldNews from './components/oldNews';
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 const token = localStorage.getItem('token');
@@ -34,7 +36,7 @@ if (token) {
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}>
+    <Router onUpdate={() => window.scrollTo(0, 0)}  history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={images} />
         <Route path="addevent" component={addEvent} />
@@ -49,6 +51,8 @@ ReactDOM.render(
         <Route path="frodleikur" component={knowledge}/>
         <Route path="english" component={English} />
         <Route path="opnunartimar" component={Opnunartimi} />
+        <Route path="vefrit" component={Vefrit} />
+        <Route path="eldrifrettir" component={OldNews} />
       </Route>
     </Router>
   </Provider>

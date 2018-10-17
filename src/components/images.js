@@ -1,42 +1,49 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
-
+import {Link } from 'react-router';
 import Fetcher from './fetcher';
-import ImageSlider from './imageSlider';
-import './images.scss';
+
+import "../style/myStyles/_images.scss";
+import Portal from './Portal';
 
 class Images extends Component{
       constructor(props){
             super(props);
-            this.state = {};
-            this.renderMyLink = this.renderMyLink.bind(this);
       }
       componentWillMount(){
             this.props.fetchPost();
       }
 
-      renderMyLink() {
+      // Render'ar fréttir fyrir forsíðu. Viljum aðeins sýna fyrstu 5 fréttirnar.
+      // Loadum síðan fleiri myndir með "Eldri Fréttir" takkanum.
+      renderMyLink = () => {
             return (
                   <div className="relative">
-                        <Fetcher className="posts" path="post" array = {this.props.posts} />
-                        <div className="posts__coolshadow"></div>
+                        <Fetcher className="posts" path="post" array = {this.props.posts.slice(0,4)} />
+
                   </div>
             )
       }
-      renderMyEvents() {
-            return <div>  <Fetcher path="event" array = {this.props.events} /></div>
-      }
 
       render() {
-           const {posts, events} = this.props;
+           const {posts} = this.props;
 
             return(
-            <div>
-                  
-              <div className="boom">
-              </div>
-              {posts ? this.renderMyLink(): <div> Loading</div>}
+            <div className="images">
+                  <Portal>
+                        <div className="post--component__title">
+                              <h1>
+                                    Landbúnaðarsafn Íslands
+                              </h1>
+                        </div>
+                  </Portal>
+                  {posts ? this.renderMyLink(): <div> Loading</div>}
+                  <Link className="images--seeMore" to="/eldrifrettir">
+                        <h3> 
+                              Sjá eldri fréttir
+                        </h3>
+                  </Link>
             </div>
             )
       }

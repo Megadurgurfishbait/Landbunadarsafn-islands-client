@@ -3,7 +3,9 @@ import * as actions from '../actions';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 
-import './myPictures.scss';
+
+import "../style/myStyles/_myPictures.scss";
+
 
 class MyPictures extends Component {
       constructor() {
@@ -21,11 +23,11 @@ class MyPictures extends Component {
             }     
       }
       seeState = () =>{
-            console.log("ButtonPush", this.state.selectedImages);
             
             this.state.selectedImages.map(values => {
                   this.props.deleteImage(values, callback => {
                         console.log("Mynd eytt");
+
                   });
                   this.props.deleteImageChunks(values, callback => {
                         console.log("Gögnum eytt");
@@ -59,7 +61,7 @@ class MyPictures extends Component {
                                     <div className="myPictures--container__card" key={values._id}>
                                     <input className="myPictures--container__card--input" type="checkbox" id={values._id} onChange={this.handleCheckboxChange} />
                                           <label htmlFor={values._id} className="myPictures--container__card--label"></label>
-                                                <img className = "myPictures--container__card--image"src={`${ROOT_URL}/${values.filename}`}/> 
+                                                <img alt="myndir í safni" className = "myPictures--container__card--image"src={`${ROOT_URL}/${values.filename}`}/> 
                                           
                                     </div>
                                     )

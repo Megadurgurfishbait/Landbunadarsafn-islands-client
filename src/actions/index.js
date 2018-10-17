@@ -216,7 +216,7 @@ export function getFrontpageImages() {
                         payload: response.data
                   });
             }) .catch(response => {
-                  console.log("hér", response.err)
+                  console.log("hér", response.data)
                   dispatch(authError(response.data.error));
             })
       }

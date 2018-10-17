@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import axios, { post } from 'axios';
+import { post } from 'axios';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import Modal from './modal.js';
 import ShowtimeModal from "./showtimeModal.js";
 import {browserHistory} from 'react-router';
-
-import './feature.scss'
+import '../../style/myStyles/_feature.scss';
 
 class Feature extends Component {
   constructor(props) {
@@ -51,14 +50,14 @@ showModal = (e) => {
       }
       e.preventDefault() // Stop form submit   
       this.fileUpload(this.state.file).then((response)=>{
-            this.setState({uploadSuccess: true})
-            this.state.file = null;
+            this.setState({uploadSuccess: true, file: null});
+            //this.state.file = null;
       })
   }
 
   onFileChange = (e) => {
-    this.setState({file:e.target.files[0]})
-    this.state.uploadSuccess = false;
+    this.setState({file:e.target.files[0], uploadSuccess: false});
+    //this.state.uploadSuccess = false;
   }
 
   fileUpload = (file) =>{

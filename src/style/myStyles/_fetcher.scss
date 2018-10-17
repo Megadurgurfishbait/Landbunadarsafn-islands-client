@@ -1,0 +1,268 @@
+@import './base';
+
+.posts {
+      text-decoration: none;
+      list-style: none;
+      height: 100%;
+      overflow: visible;
+      max-width:75vw;
+      display: flex;
+      z-index: -1;
+      margin: 2rem auto 0rem auto;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border-radius: 5px;
+      padding: 1rem;
+
+      @media (max-width: $bp-tab-port){ 
+            justify-content: space-between;
+
+      }
+      
+      @media (max-width: $bp-tab-port){ 
+            justify-content: center;
+      }
+      
+      &--card {
+
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            width: 23vw;
+            min-width: 280px;
+            height: 35vh;
+            border: 1px black solid;
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: $bp-tab-land){
+                height: 40vh;
+                width: 30vw ;
+            }
+
+            @media (max-width: $bp-tab-port){
+                  width: 60%;
+            }
+
+            @media (max-width: $bp-phone){
+                  height: 55vh;
+              }
+            
+
+            &:first-child {
+                  margin: 2rem 0rem;
+                  color: black;
+                  height: 80%;
+                  width: 100%;
+
+                  @media (max-width: $bp-tab-port){
+
+                        text-decoration: none;
+                        color: black;
+                        display: flex;
+                        flex-flow: column;
+                        height: 40vh;
+                        width: 60%;
+                        min-width: 280px;
+                        position: relative;
+                        margin: 0rem;
+                        margin-bottom: 2rem;
+                        
+            }
+
+
+
+            @media (max-width: $bp-phone){
+                  height: 55vh;
+              }
+
+
+                  &:hover .overlay,
+                  :focus .overlay {
+                        opacity: 1;
+                        height: 100%;
+                        text-decoration: none;
+                        width: 60%;
+                  }
+
+                  &:hover,
+                  :focus {
+                        text-decoration: none;
+                        color: black;
+                  }
+
+
+                  & > a {
+
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        height:40vh;
+
+                        @media (max-width: $bp-tab-port){
+                             flex-direction: column;
+                        }
+
+                        @media (max-width: $bp-phone){
+                              height: 55vh;
+                          }
+
+                        & > img {
+                              height: 100%;
+                              flex: 1 0 60%;
+                              object-fit: cover;
+
+                              @media (max-width: $bp-tab-port){
+                                    flex: 1 0 35%;
+
+                              }
+                        }
+
+                        & * h1 {
+                              flex: 1 0 40%;
+                              font-size: 3rem;
+                              
+
+                              @media (max-width: $bp-tab-port){
+                                    font-size: 1.3rem;
+                              }     
+                        }
+
+                  }
+            }
+
+
+
+            &__link {
+                  text-decoration: none;
+                  color: black;
+                  display: flex;
+                  flex-flow: column;
+                  height: 100%;
+                  width: 100%;
+                  position: relative;
+
+                  &:hover  .overlay {
+                        opacity: 1;
+                        width: 100%;
+                        text-decoration: none;
+                        height: 50%;
+                      }
+
+
+                      &:focus  .overlay {
+                        opacity: 1;
+                        width: 100%;
+                        text-decoration: none;
+                        height: 50%;
+                      }
+
+                  &:hover {
+                        text-decoration: none;
+                        color: black;
+                  }
+
+                  &:focus      {
+                        text-decoration: none;
+                        color: black;
+                  }
+                      
+            }
+
+            &__image {
+                  position: relative;
+                  width: 100%;
+                  min-height: 50%;
+                  flex: 0 1 auto;
+                  object-fit: cover;
+                  
+            }
+            &__textbox {
+                  display: block;
+                  box-shadow: inset 0px 1px 15px rgba(0, 0, 0, 0.144);
+                  flex: 1 1 auto;
+                  padding:0rem 1rem 0rem 1rem;
+                  min-height: 50%;
+                  font-size: 1rem;
+                  text-align: start;
+                  overflow: hidden;
+                  &__text {
+                        
+                        font-size: 1rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 4; /* number of lines to show */
+                        line-height: 1.1;        /* fallback */
+                        max-height: 1.1*4;       /* fallback */
+                  }
+
+            }
+            &__title {
+                  width: 95%;
+                  font-size: 1.2rem;
+                  font-weight: 800;
+                  text-decoration: none;
+                  padding-top: 10px;
+                  font-variant: small-caps;
+            }     
+
+            &__date {
+                  position: absolute;
+                  font-size: 1rem;
+                  bottom: 0px;
+            }
+      }
+}
+
+
+.text {
+      color: white;
+      font-size: 2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      white-space: nowrap;
+      overflow:hidden;
+}
+
+
+    .overlay {
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      width: 60%;
+      opacity: 0;
+      transition: .6s ;
+      background-color: rgba(0, 0, 0, 0.712);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

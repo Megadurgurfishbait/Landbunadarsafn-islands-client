@@ -3,7 +3,9 @@ import * as actions from '../actions';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 
-import "./addEvent.scss";
+
+import "../style/myStyles/_addEvent.scss";
+
 
 class componentName extends Component {
       constructor() {

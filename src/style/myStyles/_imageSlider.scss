@@ -1,0 +1,41 @@
+@import './base';
+
+.slider {
+      height: inherit;
+      min-width: 100%;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      
+      @media (max-width: $bp-tab-land){
+            min-width: none;
+      }
+
+      &--prufa {
+            height: 100%;
+
+            
+            & > span {
+
+                  z-index: 1000;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  background-color: green;
+                  transform: translate(-50%, -50%);
+            }
+            & > img {
+                 // overflow: hidden;
+                  object-fit: cover;
+                  min-width: 100%;
+                  min-height: 100% ;
+                  transform: translate(0%, -27%);
+            }
+      }
+}
+
+.slider-container {
+      height: 80vh;
+}
+
+

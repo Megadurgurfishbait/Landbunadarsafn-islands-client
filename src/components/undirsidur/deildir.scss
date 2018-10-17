@@ -1,0 +1,38 @@
+.deildir {
+
+
+      &--article {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            margin: 2rem 0rem;
+            &__info {
+                  display: flex;
+                  flex: 1 1 70%;
+                  flex-direction: column;
+
+                  &--title {
+                        font-style: italic;
+                  }
+            }
+
+            &__icons {
+                  flex: 1 1 15%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  & > svg {
+                        fill: gray;
+                        height: 40px;
+                        width: 40px;
+                  }
+            }
+
+            &__number {
+                  flex: 1 1 15%;
+            }
+
+
+
+      }
+}

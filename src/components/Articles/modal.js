@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ModalImage from './modalImage';
 
-import './modal.scss';
+import '../../style/myStyles/_modal.scss';
 
 class Modal extends Component {
       constructor() {

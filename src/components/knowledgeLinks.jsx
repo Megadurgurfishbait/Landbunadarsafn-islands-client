@@ -5,7 +5,11 @@ import UmSafnid from './undirsidur/umSafnid';
 import Mjolkurskolinn from './undirsidur/mjolkurskolinn';
 import Stuttmyndir from './undirsidur/stuttmyndir';
 import Velunnarar from './undirsidur/velunnarar';
-import './knowledgeLinks.scss';
+import Vefrit from './undirsidur/vefrit';
+import DeildA from './undirsidur/deildA';
+import DeildB from './undirsidur/deildB';
+
+import "../style/myStyles/_knowledgeLinks.scss";
 
 export default class KnowledgeLinks extends Component {
 
@@ -22,6 +26,19 @@ export default class KnowledgeLinks extends Component {
     if(this.props.show === "Velunnarar"){
       return (<Velunnarar />)
     }
+    if(this.props.show === "Vefrit"){
+      return (<Vefrit />)
+    }
+    if(this.props.show === "deildA"){
+      return (<DeildA />)
+    }
+    if(this.props.show === "deildB"){
+      return (<DeildB />)
+    }
+    if(this.props.show === "Umsafnid"){
+      return (<UmSafnid />)
+    }
+
   }
 
   render() {

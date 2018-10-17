@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import './modalImage.scss';
-
+import '../../style/myStyles/_modalImage.scss';
 export default class ModalImage extends Component {
       
       constructor() {

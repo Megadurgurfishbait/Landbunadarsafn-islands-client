@@ -3,7 +3,8 @@ import * as actions from '../actions';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 
-import './frontpagePics.scss';
+
+import "../style/myStyles/_frontpagePics.scss";
 
 class FrontpagePics extends Component {
       constructor() {

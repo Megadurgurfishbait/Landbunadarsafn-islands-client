@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 const Mjolkurskolinn = () =>
   <div>
     <h1> Mjólkurskólinn </h1>

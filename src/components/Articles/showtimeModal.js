@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../post.scss';
+import '../../style/myStyles/_post.scss';
 
 class showtimeModal extends Component {
 
@@ -16,13 +16,13 @@ class showtimeModal extends Component {
                         <div className="post-container">
                               <div className="post">
                                     {this.props.title ? (<h2 className="post--component__title">{this.props.title}</h2>): ""}
-                                    {this.props.mainPic ? (<img className="post--component__headingImage" src={`${ROOT_URL}/${this.props.mainPic}`} />): ""}
+                                    {this.props.mainPic ? (<img alt="Aðalmynd" className="post--component__headingImage" src={`${ROOT_URL}/${this.props.mainPic}`} />): ""}
                                     <div className="post--component__text">{this.props.text}</div>
                               </div>
                               <div className="post--component__picContainer">
                                     {this.props.secPic ? (  this.props.secPic.map(value => {
                                           return (
-                                          <img className="img-thumbnail" key={value} src={`${ROOT_URL}/${value}`}/>
+                                          <img alt="Auka myndir með frétt" className="img-thumbnail" key={value} src={`${ROOT_URL}/${value}`}/>
                                           )
                                     })) : <div> Hér koma myndirnar </div>}
                               </div>

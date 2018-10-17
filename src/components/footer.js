@@ -1,46 +1,46 @@
-import React, { Component } from 'react';
-import "./footer.scss";
+import React from 'react';
+import "../style/myStyles/_footer.scss";
 
+import {Link} from "react-router";
+import  Icons from "../img/foooter/sprites.svg";
 
 const Footer = (props) => 
       <div className="footer">
-            <div className="footer--left">
-                  {/*
-                  <ul>
-                       {props.array ? 
-
-                       <div>
-                               <li>
-                                     
-                              </li>
-
-                       </div>
-
-                       : <div>loading</div>}
-                  </ul>
-                  
-                  
-                  <h3>Önnur söfn </h3>
-                  <li className="li"><a href="http://www.thjodminjasafn.is/"> Þjóðminjasafn Íslands</a></li>
-                  <li className="li"><a href="http://www.gl-estrup.dk/dk/forside.aspx"> Dansk landbrugsmuseum </a></li>
-                  <li className="li"><a href="http://vitenparken.no/">Norsk landbrugsmuseum</a></li>
-                  <li className="li"><a href="http://www.sarka.fi/in-english/">The Finnish Museum of Agriculture</a></li>
-                  */}
-           </div>
-            <div className="footer--middle">
-                  <h3>Sérstakur velunnari safnsins</h3>
-                  <img src="https://thor.is/image/data/simplify/thorlogo_web.png"/>
-            </div>
-            <div className="footer--right">
-                  <h3>Hafðu samband</h3>
-                  <p> 
-                        <h5  className="footer--right__text">Hvanneyri</h5>
-                        <h5  className="footer--right__text">311 Borgarnes</h5>
-                        <h5  className="footer--right__text">Sími 844 7740</h5>
-                        <h5  className="footer--right__text">Sumaropnun: júní - ágúst, frá kl. 11:00 - 17:00 </h5>
-                        <h5  className="footer--right__text">Vetraropnun: eftir samkomulagi</h5>
-                  </p>
-            </div>
+            <ul className="footer-list">
+                  <li className="footer-list-items">
+                        <svg>
+                              <use xlinkHref={`${Icons}#icon-clock`}></use>
+                        </svg>
+                        <span className="footer-list-items-text1">
+                              Sumaropnun: júní - ágúst, frá kl. 11:00 - 17:00
+                              Vetraropnun: eftir samkomulagi
+                        </span>
+                  </li>
+                  <li className="footer-list-items">
+                        <svg>
+                              <use xlinkHref={`${Icons}#icon-email`}></use>
+                        </svg>
+                        <span className="footer-list-items-text">
+                              Ragnhildurhj@lbhi.isi
+                        </span>
+                  </li>
+                  <li className="footer-list-items">
+                        <svg>
+                              <use xlinkHref={`${Icons}#icon-phone`}></use>
+                        </svg>
+                        <span className="footer-list-items-text">
+                              +354 844 7740
+                        </span>
+                  </li>
+                  <li className="footer-list-items">
+                        <svg>
+                              <use xlinkHref={`${Icons}#icon-location-pin`}></use>
+                        </svg>
+                        <span className="footer-list-items-text">
+                              Hvanneyri 311 Borgarnes
+                        </span>
+                  </li>
+            </ul>
       </div>
 
 export default Footer;
