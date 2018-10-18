@@ -4,7 +4,7 @@ import * as actions from '../actions';
 import { Link, browserHistory } from 'react-router';
 import Portal from './Portal';
 import "../style/myStyles/_post.scss";
-
+import config from '../config';
 
 
  class Post extends Component {
@@ -32,7 +32,6 @@ import "../style/myStyles/_post.scss";
                   return(
                         <div>
                               <button className="btn btn-danger post--btn" onClick={this.deleteMe.bind(this)}>Eyða pósti</button>
-                              <button className="btn btn-danger post--btn" onClick={this.changeArticle.bind(this)}>Breyta pósti </button>
                         </div>
                   )
             }else{
@@ -46,7 +45,7 @@ import "../style/myStyles/_post.scss";
             });
       }
       render() {
-            const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image";
+            const ROOT_URL = `${config.slod}/image`;
             if(!this.props.post  || this.props.post._id != this.props.params.id) {
                   return <div className="post-loading"> Loading..</div>
             }    

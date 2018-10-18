@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from "react-router";
 import "../style/myStyles/_fetcher.scss";
+import config from '../config';
 
 
-const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image"
+const ROOT_URL = `${config.slod}/image`;
 
 // Type OldNews: Sýnir lista með Dagsetningu, nafn á frétt og takkann "Sjá eldri fréttir"
 // Type Null: Sýnir fréttir á forsíðu með dagsetningu, mynd, lesa meira hover og nafn á frétt.
 const Fetcher = (props) => 
       <div className={props.className}>
+      {console.log("her er eg", props)}
       {props.array ? (props.array.map(value => {
             return (
                   <li className={props.className + "--card"} key={value._id}>

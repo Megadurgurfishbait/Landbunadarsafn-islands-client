@@ -6,6 +6,7 @@ import Modal from './modal.js';
 import ShowtimeModal from "./showtimeModal.js";
 import {browserHistory} from 'react-router';
 import '../../style/myStyles/_feature.scss';
+import config from '../../config';
 
 class Feature extends Component {
   constructor(props) {
@@ -62,15 +63,15 @@ showModal = (e) => {
 
   fileUpload = (file) =>{
       this.fileInput.value= "";
-    const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/upload";
+      const ROOT_URL = `${config.slod}/upload`;
     const formData = new FormData();
     formData.append('file', file);
-    const config = {
+    const send = {
         headers: {
             'content-type': 'multipart/form-data'
         }
     }
-    return post(ROOT_URL, formData,config)
+    return post(ROOT_URL, formData,send)
   }
 
   saveText = (e) => {
@@ -95,7 +96,6 @@ showModal = (e) => {
   }
 
   render() {
-    const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image";
     return (
       <div className="form-group feature">
             <div className="feature--headline">

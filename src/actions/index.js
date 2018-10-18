@@ -18,8 +18,9 @@ import { AUTH_USER,
       ADD_EVENT,
       GET_EVENTS
       } from './types';
-
-const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com";
+import config from '../config';
+const ROOT_URL = config.slod;
+console.log(ROOT_URL);
 
 export function signInUser({email, password}){
 
@@ -118,11 +119,12 @@ export function sendPost({title, text, headingPath, filePath}, callback){
 }
 
 export function fetchPost() {
-
+      console.log("h+er er erggsa");
       return function(dispatch){
             axios.get(`${ROOT_URL}/posts`,{
             })
             .then(response => {
+                  console.log(response.data);
                   dispatch({
                         type: FETCH_POST,
                         payload: response.data

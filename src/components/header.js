@@ -53,7 +53,7 @@ import "../style/myStyles/_header.scss";
                    <div className="header">
                      <nav className="header---container">
                        <Link to="/" className="header--block">
-                       <img src="https://fierce-plateau-26257.herokuapp.com/image/84aa59c5182c189203db409762919c1d.jpg" width="64" height="64"  />
+             { /* <img src="https://fierce-plateau-26257.herokuapp.com/image/84aa59c5182c189203db409762919c1d.jpg" width="64" height="64"  /> */}
                               Landbúnaðarsafn Íslands 
                         </Link>
                         </nav>

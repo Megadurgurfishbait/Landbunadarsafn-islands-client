@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ModalImage from './modalImage';
-
+import config from '../../config';
 import '../../style/myStyles/_modal.scss';
 
 class Modal extends Component {
@@ -47,7 +47,7 @@ class Modal extends Component {
       render() {
 
            const { images } = this.props;
-            const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image";
+           const ROOT_URL = `${config.slod}/image`;
 
             if(!this.props.show || !images){
                   return null;

@@ -1,18 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
-import Portal from './Portal';
-
+import config from '../config';
 import "../style/myStyles/_imageSlider.scss";
 
 class ImageSlider extends React.Component {
 
       componentWillMount() {
-            this.props.getFrontpageImages();
+            //this.props.getFrontpageImages();
       }
 
     render() {
-      const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image"
+      const ROOT_URL = `${config.slod}/image`;
       if(!this.props.images){
             return <div>Loading..</div>
       }

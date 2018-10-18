@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import '../../style/myStyles/_post.scss';
-
+import config from '../../config';
 class showtimeModal extends Component {
 
       onClose = (e) => {
             this.props.onClose && this.props.onClose(e);
       }
       render() {
-            const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image";
+            const ROOT_URL = `${config.slod}/image`;
             if(!this.props.show){
                   return null;
             }

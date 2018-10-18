@@ -13,6 +13,7 @@ class Images extends Component{
       }
       componentWillMount(){
             this.props.fetchPost();
+
       }
 
       // Render'ar fréttir fyrir forsíðu. Viljum aðeins sýna fyrstu 5 fréttirnar.
@@ -28,7 +29,7 @@ class Images extends Component{
 
       render() {
            const {posts} = this.props;
-
+            console.log(this.props.posts);
             return(
             <div className="images">
                   <Portal>

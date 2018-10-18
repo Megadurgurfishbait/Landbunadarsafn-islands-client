@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as actions from '../actions';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
-
+import config from '../config';
 
 import "../style/myStyles/_myPictures.scss";
 
@@ -45,7 +45,7 @@ class MyPictures extends Component {
       }
       render() {
         
-            const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image"
+            const ROOT_URL = `${config.slod}/image`;
             const {images} = this.props;
             if(!images){
                   return <div> Er að hugsa, bíddu í augnablik.  </div>

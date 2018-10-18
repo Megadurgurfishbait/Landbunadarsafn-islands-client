@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as actions from '../actions';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
-
+import config from '../config';
 
 import "../style/myStyles/_frontpagePics.scss";
 
@@ -51,17 +51,20 @@ class FrontpagePics extends Component {
       }
       render() {
 
-            const ROOT_URL = "https://fierce-plateau-26257.herokuapp.com/image"
+            const ROOT_URL = `${config.slod}/image`;
             const {images, frontpageimages} = this.props;
             if(!images){
                   return <div> Engar myndir í safni  </div>
             }
+            console.log(frontpageimages);
             return (
                   <div className="frontpage">
                         <div className="frontpage--chosen">
                               <h1 className="frontpage--chosen__title">Myndir sem eru þegar á forsíðu </h1>
                               <div className="frontpage--chosen__picturecontainer">
-                                    {frontpageimages.map((values) => {
+
+                              { frontpageimages ? 
+                                    frontpageimages.map((values) => {
                                           let {imgLocation} = values;
                                           return (
                                                 <div key={imgLocation}  className="frontpage--chosen__picturecontainer-button">
@@ -70,7 +73,9 @@ class FrontpagePics extends Component {
                                                       </button>
                                                 </div>
                                           )
-                                    })}
+                                    })
+
+                              : <div> Engar forsíðumyndir eru til</div>}
                               </div>
                               <h5>Smeltu á mynd til að eyða henni af forsíðu</h5>
                         </div>
