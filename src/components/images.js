@@ -5,7 +5,7 @@ import {Link } from 'react-router';
 import Fetcher from './fetcher';
 
 import "../style/myStyles/_images.scss";
-import Portal from './Portal';
+
 
 class Images extends Component{
       constructor(props){
@@ -29,16 +29,14 @@ class Images extends Component{
 
       render() {
            const {posts} = this.props;
-            console.log(this.props.posts);
+
             return(
             <div className="images">
-                  <Portal>
-                        <div className="post--component__title">
-                              <h1>
-                                    Landbúnaðarsafn Íslands
-                              </h1>
-                        </div>
-                  </Portal>
+                  <div className="post--component__title">
+                        <h1>
+                              Landbúnaðarsafn Íslands
+                        </h1>
+                  </div>
                   {posts ? this.renderMyLink(): <div> Loading</div>}
                   <Link className="images--seeMore" to="/eldrifrettir">
                         <h3> 

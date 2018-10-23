@@ -7,7 +7,7 @@ import "../style/myStyles/_imageSlider.scss";
 class ImageSlider extends React.Component {
 
       componentWillMount() {
-            this.props.getFrontpageImages();
+           this.props.getFrontpageImages();
       }
 
     render() {

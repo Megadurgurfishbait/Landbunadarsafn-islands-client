@@ -5,7 +5,6 @@ import "../style/myStyles/_portal.scss";
 
 
 const portalRoot = document.querySelector('.portal');
-console.log("portal", portalRoot);
 
 export default class Portal extends Component {
 
@@ -13,7 +12,7 @@ export default class Portal extends Component {
             super();
             this.el = document.createElement('div');
             this.el.className = "portalDiv";
-            console.log("el er: ", this.el);
+
       }
 
       componentDidMount = () => {
@@ -25,9 +24,8 @@ export default class Portal extends Component {
       }
 
 
-
       render() {
-            console.log(this.props.children);
+            
             return ReactDOM.createPortal(this.props.children, this.el);
       }
 

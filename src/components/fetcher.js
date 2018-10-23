@@ -5,12 +5,11 @@ import config from '../config';
 
 
 const ROOT_URL = `${config.slod}/image`;
-
+// Stöðluð mynd ef að það fylgir ekki mynd með frétt
 // Type OldNews: Sýnir lista með Dagsetningu, nafn á frétt og takkann "Sjá eldri fréttir"
 // Type Null: Sýnir fréttir á forsíðu með dagsetningu, mynd, lesa meira hover og nafn á frétt.
 const Fetcher = (props) => 
       <div className={props.className}>
-      {console.log("her er eg", props)}
       {props.array ? (props.array.map(value => {
             return (
                   <li className={props.className + "--card"} key={value._id}>
@@ -19,8 +18,9 @@ const Fetcher = (props) =>
                                                                               <div className="text">Lesa meira</div>
                                                                               </div> 
                                                                               : null }
-                              {props.type !="oldNews" ? <img alt="Mynd með frétt" className={props.className + "--card" + "__image"} src={`${ROOT_URL}/${value.headingImg}`} /> 
-                                                                              :null}
+
+                              {props.type !="oldNews"  ?  <img alt="Mynd með frétt" className={props.className + "--card" + "__image"} src={`${ROOT_URL}/${value.headingImg}`} />
+                                                                              :  null}
                               <div className={props.className + "--card" + "__textbox"}>
                                     {props.type === "oldNews" ? <h3 className={props.className + "--card" + "__see"}>Sjá Frétt</h3>
                                                                                       : null}

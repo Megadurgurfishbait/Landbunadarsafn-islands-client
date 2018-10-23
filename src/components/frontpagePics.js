@@ -35,7 +35,8 @@ class FrontpagePics extends Component {
 
       componentWillMount() {
             this.props.fetchImages();
-            this.props.getFrontpageImages();
+          
+           this.props.getFrontpageImages();
       }
 
       deleteImages = (e) => {

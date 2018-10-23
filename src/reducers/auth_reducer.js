@@ -24,10 +24,8 @@ export default function(state = {}, action) {
             case SEND_POST:
                   return {...state, message: action.payload};
             case FETCH_POST:
-            console.log(action.payload);
                   return {...state, posts: action.payload};
             case SINGLE_POST:
-            console.log("reducer", action.payload[0]);
                   return {...state, post: action.payload[0]};
             case DELETE_POST:
                   return _.omit(state, action.payload);

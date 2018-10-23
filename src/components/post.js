@@ -53,10 +53,13 @@ import config from '../config';
                   <div className="post-container">
                         <div className="post">
                               <div className="post--component">
+                              
+                              {this.props.post.headingImg ? 
                                     <img 
                                     className="post--component__headingImage"
                                     src={`${ROOT_URL}/${this.props.post.headingImg}`}
                                     />
+                              :null }
                                     {this.props.authenticated ?  
                                     <textarea 
                                           className="post--component__text" 
@@ -70,12 +73,14 @@ import config from '../config';
                         </div>
                         
                         <div className="post--component__picContainer">
+                        {this.props.post ? 
                         <Portal>
                               <div className="post--component__title"> 
                                     <h1>{this.props.post.title}</h1>
                                     <h5>{this.props.post.createdAt}</h5>
                               </div>
                         </Portal>
+                        : null }
                         {console.log("Props", this.props.post.filePath.length)}
                         {this.props.post.filePath.length != 0 ? <Fragment>
                                                                                                 <div className="post--component__textContainer">
@@ -94,7 +99,7 @@ import config from '../config';
                                                                                                 </div>
                                                                                                 </Fragment> 
                                                                                           :null }
-                        <Link className="post--link" to="/"> <h4> Tilbaka á upphafssíðu </h4> </Link>
+                        <Link className="post--link" to="/"> <h4> Til baka á upphafssíðu </h4> </Link>
                         </div>
 
                         {this.renderDeleteButton()}

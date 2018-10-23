@@ -4,7 +4,7 @@ import * as actions from '../actions';
 import Fetcher from './fetcher';
 
 import "../style/myStyles/_oldNews.scss";
-import Portal from './Portal';
+
 
 class OldNews extends Component {
 
@@ -28,19 +28,11 @@ class OldNews extends Component {
             return (
                   <div>
                         { posts ? this.renderMyLink() : <div> Hleður </div> }
-                        <Portal> 
-                              <div className="post--component__title">
-                                    <h1>
-                                          Eldri Fréttir
-                                    </h1>
-                              </div>
-                        </Portal>
                   </div>
             );
       }
 }
 function mapStateToProps(state){
-      console.log(state.auth.posts)
       return {
             posts: state.auth.posts
       }

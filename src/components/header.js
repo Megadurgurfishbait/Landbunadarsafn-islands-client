@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-
+import config from '../config';
 import "../style/myStyles/_header.scss";
 
 
@@ -48,15 +48,18 @@ import "../style/myStyles/_header.scss";
       }
 
        render() {
-
+            const ROOT_URL = `${config.slod}/image`;
              return (
                    <div className="header">
-                     <nav className="header---container">
+                     <div className="header--container">
                        <Link to="/" className="header--block">
-             { /* <img src="https://fierce-plateau-26257.herokuapp.com/image/84aa59c5182c189203db409762919c1d.jpg" width="64" height="64"  /> */}
-                              Landbúnaðarsafn Íslands 
+                              <div className="header--block__image">
+                                    <img src={`${ROOT_URL}/afdecd580a432ec69dc923dda5f6231a.png`}  /> 
+                              </div>
+
+                              <div className="header--block__title"><h1>Landbúnaðarsafn Íslands </h1></div>
                         </Link>
-                        </nav>
+                        </div>
                        <ul className="links ">
                          {this.renderLinks()}
                        </ul>

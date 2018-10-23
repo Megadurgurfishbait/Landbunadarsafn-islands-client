@@ -7,6 +7,11 @@
       width: 70%;
       justify-content: center;
       margin: 4rem 0;
+
+      @media (max-width: $bp-tab-land){
+            width: 80%;
+      }
+
       @media (max-width: $bp-tab-port){
             width: 95%;
       }
@@ -45,7 +50,7 @@
             &__title {
                   display: flex;
                   flex: 2 1 75%;
-                  font-size: 2rem;
+                  font-size: 1.7rem;
 
                   @media (max-width: $bp-tab-land){
                         font-size: 1.4rem;
@@ -57,7 +62,10 @@
             }
 
             &__date {
-                  margin-right: 6rem;
+                  display: flex;
+                  flex: 1 1 14%;
+                  margin-right: 5rem;
+                  white-space: nowrap;
                   @media (max-width: $bp-tab-land){
                         font-size: 1.4rem;
                         margin-right: 3rem;

@@ -7,11 +7,11 @@ export default class deildA extends Component {
     super(props);
     this.state = {
       pdfs: [
-            {nr: "1", title: "Engjar - Saga áveitna og notkun engja", author: "Magnús Óskarsson", date:"Mars 2008", link: "3d50ba19ca4d4f1936da9dc89f8073d6.pdf" },
-            {nr: "2",title: "Gríður, Jón Dýri og Íhaldsmajorinn", author: "Bjarni Guðmundsson", date:"Mars 2008", link: "a7c6666ea56efd2851812ae3b42a1f34.pdf" },
-            {nr: "3",title: "Íslenskir Jarðræktarhættir á 18. og 19. öld", author: "Bjarni Guðmundsson", date:"September 2008", link: "a6c44771a220d2722a0355a19f35d6eb.pdf" },
-            {nr: "3",title: "Nýting flæðiengja í Borgarfirði", author: "Ragnhildir Helga Jónsdóttir o.fl.", date:"Febrúar 2012", link: "a6c44771a220d2722a0355a19f35d6eb.pdf" },
-            {nr: "3",title: "Ræktunarminjar í Ólafsdal", author: "Ragnhildur Helga Jónsdóttir og Bjarni Guðmundsson", date:"2016", link: "a6c44771a220d2722a0355a19f35d6eb.pdf" }
+            {nr: "1", title: "Engjar - Saga áveitna og notkun engja", author: "Magnús Óskarsson", date:"Mars 2008", link: "689c8fe8a3d9b75ede3225ee59a734f3.pdf" },
+            {nr: "2",title: "Gríður, Jón Dýri og Íhaldsmajorinn", author: "Bjarni Guðmundsson", date:"Mars 2008", link: "2655bfc3a456b62d5090696f0a55ccc5.pdf" },
+            {nr: "3",title: "Íslenskir Jarðræktarhættir á 18. og 19. öld", author: "Bjarni Guðmundsson", date:"September 2008", link: "06ef36257b64c5d6b8e90905f597643f.pdf" },
+            {nr: "3",title: "Nýting flæðiengja í Borgarfirði", author: "Ragnhildir Helga Jónsdóttir o.fl.", date:"Febrúar 2012", link: "2655bfc3a456b62d5090696f0a55ccc5.pdf" },
+            {nr: "3",title: "Ræktunarminjar í Ólafsdal", author: "Ragnhildur Helga Jónsdóttir og Bjarni Guðmundsson", date:"2016", link: "f0f48682462de3d52a44de4f405d8e7a.pdf" }
       ]
     }
   }

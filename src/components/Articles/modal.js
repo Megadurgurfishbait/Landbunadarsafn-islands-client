@@ -30,25 +30,41 @@ class Modal extends Component {
             this.props.onClose && this.props.onClose(e);
       }
       handleChange = (e) =>{
-
            if(this.props.type === "radio"){
                  this.setState({
                        headlineImg: e.target.id
                  })
            }
            if(this.props.type === "checkbox"){
+            // Ef að ID er ekki til er í lagi að setja það í state.
+            if(!this.checkId(e.target.id)){
                   this.setState({
                         imgpath: [...this.state.imgpath, e.target.id]
-                  });
-           }
-      
+                  })
+            } 
+            // Ef að ID er til  þá tökum við það út úr imgpath, gerum nýtt array og setjum það sem nyja state'ið í imgpath
+            else {
+                  this.setState({
+                        imgpath : this.state.imgpath.filter(function(item){
+                              return item !== e.target.id
+                        })
+                  })
+            }
+      }
 }
-      
+      // Er ID til í imgpath?
+      checkId = (id) => {
+            var isMatch = this.state.imgpath.some(function(item) {
+                  return item === id;
+            })
+            return isMatch;
+      }
+
       render() {
 
            const { images } = this.props;
            const ROOT_URL = `${config.slod}/image`;
-
+            
             if(!this.props.show || !images){
                   return null;
             }

@@ -55,13 +55,11 @@ export default class Knowledge extends Component {
     return (
 
       <div className="knowledgeContainer">
-                        <Portal>
-                        <div className="post--component__title">
-                              <h1>
-                                    Fróðleikur
-                              </h1>
-                        </div>
-                  </Portal>
+            <div className="post--component__title">
+                  <h1>
+                        Fróðleikur
+                  </h1>
+            </div>
         <div className="knowledgeContainer--bottom">
           <div className="knowledgeContainer--text"><KnowledgeLinks show={this.state.show}/></div>
           <div className="knowledgeContainer--links">

@@ -7,19 +7,20 @@ export default class deildA extends Component {
     super(props);
     this.state = {
       pdfs: [
-            {nr: "1", title: "Torfi Bjarnason og Ólafsdalsskólinn", author: "Eyjólfur Ingvi Bjarnason", date:"Maí 2008", link: "becbf85b50a8e245ace6e0acf1a9da1f.pdf" },
-            {nr: "2",title: "Þúfnabaninn", author: "Bjarni Guðmundsson", date:"Desember 2009", link: "ee2d72c70df3530f5d66b839d1f46e08.pdf" },
-            {nr: "3",title: "Jarðnafar, arfgengi, fertala og svarðhlið", author: "Bjarni Guðmundsson", date:"Nóvember 2011", link: "ca4c6d63e2ff062b2809665d5a0f6505.pdf" },
-            {nr: "3",title: "Varahlutir í Ferguson", author: "Þór Jakobsson", date:"Maí 2012", link: "d9d0a4876688dc4ab6fde9eeee6376f3.pdf" },
-            {nr: "3",title: "Gömlu staðarhúsin á Hvanneyri", author: "Bjarni Guðmundsson", date:"2008", link: "c6a2b66fc002b76136960b08b59226c0.pdf" },
-            {nr: "3",title: "Sögukaflar um svansa og kanónur", author: "Bjarni Guðmundsson", date:"Nóvember 2013", link: "5d627699bcf293e8a988faa710e13f98.pdf" },
-            {nr: "3",title: "Heyturn á hverfanda hveli", author: "Bjarni Guðmundsson", date:"Janúar 2016", link: "1b1fa0e710e496ad52942a7ea35e4b98.pdf" },
+            {nr: "1", title: "Torfi Bjarnason og Ólafsdalsskólinn", author: "Eyjólfur Ingvi Bjarnason", date:"Maí 2008", link: "583dda38b579efc2ab6e2ea6dd3ba434.pdf" },
+            {nr: "2",title: "Þúfnabaninn", author: "Bjarni Guðmundsson", date:"Desember 2009", link: "e66897fe3dd100603e99c6b5bac07a06.pdf" },
+            {nr: "3",title: "Jarðnafar, arfgengi, fertala og svarðhlið", author: "Bjarni Guðmundsson", date:"Nóvember 2011", link: "7cd13bb5c0cad268e12964ef297b4686.pdf" },
+            {nr: "3",title: "Varahlutir í Ferguson", author: "Þór Jakobsson", date:"Maí 2012", link: "0dc36763cc9d6118632ffb24ed4ee8f8.pdf" },
+            {nr: "3",title: "Gömlu staðarhúsin á Hvanneyri", author: "Bjarni Guðmundsson", date:"2008", link: "27b5f05023c7e345382ccf4db12c5645.pdf" },
+            {nr: "3",title: "Sögukaflar um svansa og kanónur", author: "Bjarni Guðmundsson", date:"Nóvember 2013", link: "c0f45184ed29c69d80636a4ed3ac168a.pdf" },
+            {nr: "3",title: "Heyturn á hverfanda hveli", author: "Bjarni Guðmundsson", date:"Janúar 2016", link: "ecdde485443a2e39e9d22792ffbfe4ae.pdf" },
       ]
     }
   }
   
   render() {
-      const link = "https://fierce-plateau-26257.herokuapp.com/file/";
+        // Tímabundinn, linkurinn verður: http://178.128.162.183:3090/file/
+      const link = "http://localhost:3090/file/";
     return (
 
       <div className="deildir">

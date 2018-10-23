@@ -20,7 +20,7 @@ import { AUTH_USER,
       } from './types';
 import config from '../config';
 const ROOT_URL = config.slod;
-console.log(ROOT_URL);
+
 
 export function signInUser({email, password}){
 
@@ -105,10 +105,10 @@ export function fetchMessage() {
       }
 }
 
-export function sendPost({title, text, headingPath, filePath}, callback){
-
+export function sendPost({title, text, headingPath, filePath, createdAt}, callback){
+      console.log("sendpost:", createdAt);
       return function(dispatch){
-            axios.post(`${ROOT_URL}/post`, {title, text, headingPath, filePath})
+            axios.post(`${ROOT_URL}/post`, {title, text, headingPath, filePath, createdAt})
                   .then(response => {
                         dispatch({type: SEND_POST});
                   }, callback())
@@ -119,12 +119,11 @@ export function sendPost({title, text, headingPath, filePath}, callback){
 }
 
 export function fetchPost() {
-      console.log("h+er er erggsa");
+
       return function(dispatch){
             axios.get(`${ROOT_URL}/posts`,{
             })
             .then(response => {
-                  console.log(response.data);
                   dispatch({
                         type: FETCH_POST,
                         payload: response.data

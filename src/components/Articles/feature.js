@@ -8,19 +8,21 @@ import {browserHistory} from 'react-router';
 import '../../style/myStyles/_feature.scss';
 import config from '../../config';
 
+
 class Feature extends Component {
   constructor(props) {
     super(props);
     this.state ={
       file:null,
       uploadSuccess: false,
-      headingpath: "",
+      headingpath: "b015a2f3066503df233cd8c70a578277.jpg",
       path: [],
       text: "",
       title: "",
       show: false,
       type: "",
-      showtime: false
+      showtime: false,
+      createdAt: ""
     }
   }
 
@@ -58,7 +60,7 @@ showModal = (e) => {
 
   onFileChange = (e) => {
     this.setState({file:e.target.files[0], uploadSuccess: false});
-    //this.state.uploadSuccess = false;
+
   }
 
   fileUpload = (file) =>{
@@ -82,14 +84,20 @@ showModal = (e) => {
       this.setState({title: e.target.value});
   }
 
+  onChangeDate = (e) => {
+
+        this.setState({createdAt: e.target.value});
+  }
+
   sendArticle = () => {
       if(!this.state.text || !this.state.title){ return alert("Nauðsynlegt er að fylla út að minnsta kosti fyrirsögn og meginmál greinar.");}
-
+      
       this.props.sendPost({
             title: this.state.title,
             text: this.state.text,
             headingPath: this.state.headingpath,
-            filePath: this.state.path
+            filePath: this.state.path,
+            createdAt: this.state.createdAt
       }, () =>{
             browserHistory.push("/");
       });
@@ -101,6 +109,8 @@ showModal = (e) => {
             <div className="feature--headline">
                   <h3 className="feature--headline__header">Skrá fyrirsögn hér inn:</h3>
                   <input type="text" onChange={this.onChangetitle} className="feature--headline__input"/>
+                  <h4 className="feature--date">Setja dagsetningu inn</h4>
+                  <input type="date" onChange={this.onChangeDate} className="feature--headline__input"/>
             </div>
             <form  onSubmit={this.onFormSubmit} className="form-group feature--form">
                   <h3 className="feature--form__headline">Setja nýja mynd í gagnagrunn: </h3>
