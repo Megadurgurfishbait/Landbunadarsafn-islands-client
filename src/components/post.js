@@ -88,7 +88,8 @@ import config from '../config';
                                                                                                 </div>
                                                                                                 <div className="post--component__picContainer-map">
                                                                                                 { this.props.post.filePath.map(value => {
-                                                                                                      return(<div> 
+                                                                                                      return(
+                                                                                                      <div className="post--component__picContainer-map__divs"> 
                                                                                                             <img 
                                                                                                             key={value}
                                                                                                             src={`${ROOT_URL}/${value}`}

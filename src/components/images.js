@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 import {Link } from 'react-router';
 import Fetcher from './fetcher';
-
+import Portal from './Portal';
 import "../style/myStyles/_images.scss";
 
 
@@ -32,11 +32,14 @@ class Images extends Component{
 
             return(
             <div className="images">
+                  <Portal>
                   <div className="post--component__title">
                         <h1>
                               Landbúnaðarsafn Íslands
                         </h1>
                   </div>
+                  </Portal>
+
                   {posts ? this.renderMyLink(): <div> Loading</div>}
                   <Link className="images--seeMore" to="/eldrifrettir">
                         <h3> 

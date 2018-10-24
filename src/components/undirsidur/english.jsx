@@ -1,10 +1,17 @@
 import React from 'react';
 import '../../style/myStyles/_default.scss';
 import  Icons from "../../img/sprites.svg";
+import Portal from '../Portal';
 
 const English = () =>
   <div className="default">
-    <h1> About the museum </h1>
+          <Portal>
+                  <div className="post--component__title">
+                        <h1>
+                              About the museum
+                        </h1>
+                  </div>
+      </Portal>
     <div className="default--paragraph">
             <div className="default--paragraph--block">
                   <svg>

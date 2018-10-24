@@ -1,11 +1,18 @@
 import React from 'react';
 import '../../style/myStyles/_default.scss';
 import  Icons from "../../img/sprites.svg";
+import Portal from '../Portal';
 
 const Opnunartimi = () =>
   <div className="default">
-
-    <h1> Opnunartími </h1>
+      
+      <Portal>
+                  <div className="post--component__title">
+                        <h1>
+                              Opnunartími
+                        </h1>
+                  </div>
+      </Portal>
     <div className="default--paragraph">
             <div className="default--paragraph--block">
                   <svg>

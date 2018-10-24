@@ -1,41 +1,11 @@
 @import './base';
 
-.slider {
-      height: inherit;
-      min-width: 100%;
-      overflow: hidden;
-      position: relative;
-      display: block;
-      
-      @media (max-width: $bp-tab-land){
-            min-width: none;
-      }
-
-      &--prufa {
-            height: 100%;
-
-            
-            & > span {
-
-                  z-index: 1000;
-                  position: absolute;
-                  left: 50%;
-                  top: 50%;
-                  background-color: green;
-                  transform: translate(-50%, -50%);
-            }
-            & > img {
-                 // overflow: hidden;
-                  object-fit: cover;
-                  min-width: 100%;
-                  min-height: 100% ;
-                  transform: translate(0%, -27%);
-            }
-      }
-}
 
 .slider-container {
-      height: 80vh;
+      height: 60vh;
+      background-image: linear-gradient(135deg, rgba(202, 202, 202, 0.6) 0%,rgba(141, 141, 141, 0.8) 100%), url(../../img/home.jpg);
+      background-size: cover;
+      background-position: center; 
 }
 
 
