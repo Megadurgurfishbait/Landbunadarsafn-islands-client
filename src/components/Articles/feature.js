@@ -15,7 +15,7 @@ class Feature extends Component {
     this.state ={
       file:null,
       uploadSuccess: false,
-      headingpath: "b015a2f3066503df233cd8c70a578277.jpg",
+      headingpath: "",
       path: [],
       text: "",
       title: "",

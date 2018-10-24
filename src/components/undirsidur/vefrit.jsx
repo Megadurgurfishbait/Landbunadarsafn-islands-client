@@ -1,5 +1,5 @@
 import React  from 'react';
-import Photo from '../../img/plogur_mynd.gif';
+
 
 
 const Vefrit = () =>

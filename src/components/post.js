@@ -46,7 +46,7 @@ import config from '../config';
       }
       render() {
             const ROOT_URL = `${config.slod}/image`;
-            if(!this.props.post  || this.props.post._id != this.props.params.id) {
+            if(!this.props.post  || this.props.post._id !== this.props.params.id) {
                   return <div className="post-loading"> Loading..</div>
             }    
             return ( 
@@ -56,6 +56,7 @@ import config from '../config';
                               
                               {this.props.post.headingImg ? 
                                     <img 
+                                    alt="Adalmynd"
                                     className="post--component__headingImage"
                                     src={`${ROOT_URL}/${this.props.post.headingImg}`}
                                     />
@@ -82,7 +83,7 @@ import config from '../config';
                         </Portal>
                         : null }
                         {console.log("Props", this.props.post.filePath.length)}
-                        {this.props.post.filePath.length != 0 ? <Fragment>
+                        {this.props.post.filePath.length !== 0 ? <Fragment>
                                                                                                 <div className="post--component__textContainer">
                                                                                                       <h4> Fylgimyndir fréttar</h4>
                                                                                                 </div>
@@ -91,6 +92,7 @@ import config from '../config';
                                                                                                       return(
                                                                                                       <div className="post--component__picContainer-map__divs"> 
                                                                                                             <img 
+                                                                                                            alt="aukamynd"
                                                                                                             key={value}
                                                                                                             src={`${ROOT_URL}/${value}`}
                                                                                                             />

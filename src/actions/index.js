@@ -4,7 +4,6 @@ import { AUTH_USER,
       AUTH_ERROR, 
       UNAUTH_USER, 
       FETCH_MESSAGE, 
-      HANDLE_UPLOAD, 
       SEND_POST, 
       FETCH_POST, 
       SINGLE_POST, 
@@ -176,9 +175,8 @@ export function fetchImages() {
 }
 
 export function deleteImage(id, callback){
-      const request = axios.delete(`${ROOT_URL}/removeImage/${id}`)
-      .then(() => callback());
-  
+      const request = axios.delete(`${ROOT_URL}/removeImage/${id}`);
+
     return {
       type: DELETE_IMAGE,
       payload: id
@@ -186,8 +184,7 @@ export function deleteImage(id, callback){
 }
 
 export function deleteImageChunks(id, callback){
-      const request = axios.delete(`${ROOT_URL}/removeImageChunks/${id}`)
-      .then(() => callback());
+      const request = axios.delete(`${ROOT_URL}/removeImageChunks/${id}`);
   
     return {
       type: DELETE_IMAGE_CHUNKS,

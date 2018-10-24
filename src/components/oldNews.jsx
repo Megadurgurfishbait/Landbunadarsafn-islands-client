@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 import Fetcher from './fetcher';
-
+import Portal from './Portal';
 import "../style/myStyles/_oldNews.scss";
 
 
 class OldNews extends Component {
 
-      constructor(props) {
-            super(props);
-      }
       componentWillMount(){
             this.props.fetchPost();
       }
@@ -27,6 +24,13 @@ class OldNews extends Component {
             const {posts} = this.props;
             return (
                   <div>
+                  <Portal>
+                        <div className="post--component__title">
+                              <h1>
+                                    Eldri fréttir
+                              </h1>
+                        </div>
+                  </Portal>
                         { posts ? this.renderMyLink() : <div> Hleður </div> }
                   </div>
             );

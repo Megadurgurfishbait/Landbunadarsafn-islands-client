@@ -8,9 +8,7 @@ import "../style/myStyles/_images.scss";
 
 
 class Images extends Component{
-      constructor(props){
-            super(props);
-      }
+
       componentWillMount(){
             this.props.fetchPost();
 

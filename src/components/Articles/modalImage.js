@@ -33,6 +33,7 @@ export default class ModalImage extends Component {
                               />
                               <label className={`${this.state.className} modalImage--label`} key={this.props.id} htmlFor={this.props.id} ></label>
                                     <img className="modalImage--image"
+                                    alt="imgfyrirmodal"
                                                 src={this.props.path}
                                           />
                         </div>

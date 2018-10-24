@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import Arsreikningur from './undirsidur/arsreikningur';
 import UmSafnid from './undirsidur/umSafnid';
 import Mjolkurskolinn from './undirsidur/mjolkurskolinn';

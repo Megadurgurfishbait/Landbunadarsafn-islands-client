@@ -29,6 +29,7 @@ export default function(state = {}, action) {
                   return {...state, post: action.payload[0]};
             case DELETE_POST:
                   return _.omit(state, action.payload);
+            default:
+                  return state;
       }
-      return state;
 }

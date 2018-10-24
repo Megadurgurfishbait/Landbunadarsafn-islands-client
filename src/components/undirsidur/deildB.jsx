@@ -21,7 +21,7 @@ export default class deildA extends Component {
   
   render() {
         // Tímabundinn, linkurinn verður: http://178.128.162.183:3090/file/
-        const ROOT_URL = `${config.slod}/file`;
+        const ROOT_URL = `${config.slod}/file/`;
     return (
 
       <div className="deildir">
@@ -40,7 +40,7 @@ export default class deildA extends Component {
                                           <span className="deildir--article__info--author">{value.author}</span>
                                           <span className="deildir--article__info--date">{value.date}</span>
                                     </div>
-                                    <a className="deildir--article__icons" href={`${ROOT_URL}`+ `${value.link}`}>
+                                    <a className="deildir--article__icons" href={`${ROOT_URL}${value.link}`}>
                                           <svg>
                                                 <use xlinkHref={`${Icons}#icon-text-document`}></use>
                                           </svg>

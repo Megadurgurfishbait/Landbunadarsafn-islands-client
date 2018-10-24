@@ -34,6 +34,7 @@ class Signin extends Component {
       render() {
             // handleSubmit kemur úr redux-form
             // Fields kemur frá því sem að við stiltum niðri í export default reduxForm;
+            // eslint-disable-next-line
             const { handleSubmit, fields:  {email, password }} = this.props;
 
             return (

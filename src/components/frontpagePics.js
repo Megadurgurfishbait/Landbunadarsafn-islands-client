@@ -1,7 +1,7 @@
+/*
 import React, { Component } from 'react';
 import * as actions from '../actions';
 import {connect} from 'react-redux';
-import {browserHistory} from 'react-router';
 import config from '../config';
 
 import "../style/myStyles/_frontpagePics.scss";
@@ -107,3 +107,4 @@ function mapStateToProps(state){
       })
 }
 export default connect(mapStateToProps, actions)(FrontpagePics);
+*/

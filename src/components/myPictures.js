@@ -3,7 +3,6 @@ import * as actions from '../actions';
 import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
 import config from '../config';
-
 import "../style/myStyles/_myPictures.scss";
 
 
@@ -25,14 +24,10 @@ class MyPictures extends Component {
       seeState = () =>{
             
             this.state.selectedImages.map(values => {
-                  this.props.deleteImage(values, callback => {
-                        console.log("Mynd eytt");
-
-                  });
-                  this.props.deleteImageChunks(values, callback => {
-                        console.log("Gögnum eytt");
-                  });
+                  this.props.deleteImage(values);
+                  this.props.deleteImageChunks(values);
                 alert("Myndum hefur verið eytt");
+                return values;
             })
       }
 

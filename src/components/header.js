@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import config from '../config';
 import "../style/myStyles/_header.scss";
+const logo = require('../img/orginal50x50.png');
 
 
  class Header extends Component {
@@ -12,19 +12,16 @@ import "../style/myStyles/_header.scss";
 
             if(this.props.authenticated){
                   return  [
-                  <li className="nav-item">
+                  <li className="nav-item" key={3}>
                         <Link className="nav-link color-white" to="/signout">Skra mig ut</Link>
                   </li>,
-                  <li className="nav-item">
+                  <li className="nav-item"key={6}>
                         <Link className="nav-link color-white" to="/myndasafn">Myndasafn</Link>
                   </li>,
-                  <li className="nav-item">
+                  <li className="nav-item"key={7}>
                         <Link className="nav-link color-white" to="/feature"> Skrifa grein </Link>
                   </li>,
-                  <li className="nav-item">
-                        <Link className="nav-link color-white" to="/test"> Velja myndir á forsíðu </Link>
-                  </li>,
-                  <li className="nav-item">
+                  <li className="nav-item"key={8}>
                         <Link className="nav-link color-white" to="/addevent"> Add event </Link>
                   </li>
                   ];
@@ -48,13 +45,12 @@ import "../style/myStyles/_header.scss";
       }
 
        render() {
-            const ROOT_URL = `${config.slod}/image`;
              return (
                    <div className="header">
                      <div className="header--container">
                        <Link to="/" className="header--block">
                               <div className="header--block__image">
-                                    <img src={`${ROOT_URL}/afdecd580a432ec69dc923dda5f6231a.png`}  /> 
+                                    <img alt="Logo" src={logo}  /> 
                               </div>
 
                               <div className="header--block__title"><h1>Landbúnaðarsafn Íslands </h1></div>

@@ -61,7 +61,7 @@ function validate(values) {
       errors.password_confirmation = 'Please enter a password'
 }
 
-  if (values.password != values.password_confirmation) {
+  if (values.password !== values.password_confirmation) {
     errors.password = 'Password and password confirmation don\'t match!'
   }  
 
@@ -69,7 +69,6 @@ function validate(values) {
 }
 
 function mapStateToProps(state) {
-      console.log("mstp", state.auth.error);
   return {
     errorMessage: state.auth.error
   }

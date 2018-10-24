@@ -1,7 +1,5 @@
 import React from 'react';
 import "../style/myStyles/_footer.scss";
-
-import {Link} from "react-router";
 import  Icons from "../img/foooter/sprites.svg";
 
 const Footer = (props) => 

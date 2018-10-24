@@ -17,7 +17,6 @@ import { AUTH_USER } from './actions/types';
 import images from './components/images';
 import Post from './components/post';
 import MyPictures from './components/myPictures';
-import frontpagePics from './components/frontpagePics';
 import addEvent from './components/addEvent';
 import changeArticle from './components/changeArticle';
 import knowledge from './components/knowledge';
@@ -41,7 +40,6 @@ ReactDOM.render(
         <IndexRoute component={images} />
         <Route path="addevent" component={addEvent} />
         <Route path="signin" component={signin}/>
-        <Route path ="test" component={frontpagePics}/>
         <Route path="signout" component={Signout}/>
         <Route path="signup" component={Signup}/>
         <Route path="feature" component={RequireAuth(Feature)}/>

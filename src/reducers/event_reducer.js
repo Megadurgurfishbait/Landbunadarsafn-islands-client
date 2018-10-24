@@ -9,6 +9,7 @@ GET_EVENTS
                   return {...state, data: action.payload};
             case GET_EVENTS:
                   return {...state, events: action.payload}
+            default:
+                  return state;
       }
-      return state;
 }
