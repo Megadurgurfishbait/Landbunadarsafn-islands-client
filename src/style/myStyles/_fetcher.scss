@@ -67,7 +67,7 @@
                         display: flex;
                         flex-flow: column;
                         height: 40vh;
-                        width: 60%;
+                        width: 70%;
                         min-width: 300px;
                         position: relative;
                         margin: 0rem;
@@ -85,16 +85,25 @@
               }
 
 
-                  &:hover .overlay,
-                  :focus .overlay {
+                 &:hover .overlay,
+                 &:focus .overlay {
                         opacity: 1;
                         height: 100%;
                         text-decoration: none;
                         width: 60%;
+
+                        @media (max-width: $bp-tab-port){
+                              opacity: 1;
+                              width: 100%;
+                              text-decoration: none;
+                              height: 50%;
+                          }
+                        
+
                   }
 
                   &:hover,
-                  :focus {
+                  &:focus {
                         text-decoration: none;
                         color: black;
                   }
@@ -256,6 +265,7 @@
       opacity: 0;
       transition: .6s ;
       background-color: rgba(0, 0, 0, 0.712);
+
     }
 
 
