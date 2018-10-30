@@ -19,7 +19,7 @@ const Footer = (props) =>
                               <use xlinkHref={`${Icons}#icon-email`}></use>
                         </svg>
                         <span className="footer-list-items-text">
-                              Ragnhildurhj@lbhi.is
+                              ragnhildurhj@lbhi.is
                         </span>
                   </li>
                   <li className="footer-list-items">

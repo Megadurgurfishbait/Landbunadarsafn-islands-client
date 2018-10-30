@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Arsreikningur from './undirsidur/arsreikningur';
 import UmSafnid from './undirsidur/umSafnid';
 import Mjolkurskolinn from './undirsidur/mjolkurskolinn';
@@ -37,8 +38,17 @@ export default class KnowledgeLinks extends Component {
     if(this.props.show === "Umsafnid"){
       return (<UmSafnid />)
     }
+  }
+  componentDidUpdate = () => {
+      const myDomNode = ReactDOM.findDOMNode(this.myRef)
+      window.scrollTo({
+            top: myDomNode.offsetTop-80,
+            behavior: "smooth"
+      });
 
   }
+
+
 
   render() {
     if(!this.props.show){
@@ -50,7 +60,7 @@ export default class KnowledgeLinks extends Component {
     }
     
     return(
-      <div className="KnowledgeLinks">
+      <div className="KnowledgeLinks"  ref={re => {this.myRef = re}}>
         {this.renderMyText()}
       </div>
     )

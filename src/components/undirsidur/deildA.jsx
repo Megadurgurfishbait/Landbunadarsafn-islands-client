@@ -29,8 +29,8 @@ export default class deildA extends Component {
             {
                   this.state.pdfs.map(value => {
                         return (
-                              <div className="deildir--article">
-                                    <div className="deildir--article__number">Grein {value.nr}</div>
+                              <div className="deildir--article" key={value.nr}>
+
                                     <div className="deildir--article__info">
                                           <span className="deildir--article__info--title">{value.title}</span>
                                           <span className="deildir--article__info--author">{value.author}</span>

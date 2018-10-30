@@ -31,7 +31,7 @@
             overflow: hidden;
             background-color: white;
             width: 23vw;
-            min-width: 280px;
+            min-width: 300px;
             min-height: 400px;
             height: 35vh;
             border: 1px black solid;
@@ -45,7 +45,7 @@
             }
 
             @media (max-width: $bp-tab-port){
-                  width: 60%;
+                  width: 70%;
             }
 
             @media (max-width: $bp-phone){
@@ -68,7 +68,7 @@
                         flex-flow: column;
                         height: 40vh;
                         width: 60%;
-                        min-width: 280px;
+                        min-width: 300px;
                         position: relative;
                         margin: 0rem;
                         margin-bottom: 2rem;

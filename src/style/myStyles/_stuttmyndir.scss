@@ -1,0 +1,32 @@
+@import './base';
+
+
+.stuttmyndir {
+
+      display: flex;
+      height: 100%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      &--card {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0rem;
+
+
+            min-height: 90vh;
+            height: 100%;
+            & > iframe {
+                  flex: 1 1 90%;
+                  min-height: 90%;
+
+            }
+
+            & > p {
+                  margin-top: 1rem;
+            }
+      }
+
+
+}

@@ -17,22 +17,22 @@ export default class Knowledge extends Component {
   }
   renderLinks() {
     return  [
-      <li className="knowledgeContainer--links__li">
+      <li className="knowledgeContainer--links__li" key={1}>
             <button id="Umsafnid" onClick={this.handleOnClick}>Um Safnið </button>
     </li>,
-      <li className="knowledgeContainer--links__li">
+      <li className="knowledgeContainer--links__li" key={2}>
             <button id="Velunnarar" onClick={this.handleOnClick}>Velunnarar</button>
       </li>,
-      <li className="knowledgeContainer--links__li">
+      <li className="knowledgeContainer--links__li" key={3}>
             <button id="Stuttmyndir" onClick={this.handleOnClick}>Stuttmyndir</button>
       </li>,
-     <li className="knowledgeContainer--links__li">
-            <button id="Arsreikningur" onClick={this.handleOnClick}>Arsreikningur</button>
+     <li className="knowledgeContainer--links__li" key={4}>
+            <button id="Arsreikningur" onClick={this.handleOnClick}>Ársreikningar</button>
       </li>,
-      <li className="knowledgeContainer--links__li">
+      <li className="knowledgeContainer--links__li" key={5}>
              <button id="Mjolkurskolinn" onClick={this.handleOnClick}>Mjólkurskólinn</button>
       </li>,
-      <li className="knowledgeContainer--links__li ">
+      <li className="knowledgeContainer--links__li " key={6}>
             <div className="item">
 
                   <input type="checkbox" id="Vefrit"/>
@@ -65,7 +65,7 @@ export default class Knowledge extends Component {
 
 
         <div className="knowledgeContainer--bottom">
-          <div className="knowledgeContainer--text"><KnowledgeLinks show={this.state.show}/></div>
+          <div className="knowledgeContainer--text"><KnowledgeLinks  show={this.state.show}/></div>
           <div className="knowledgeContainer--links">
             <ul className="knowledgeContainer--links__ul">
               {this.renderLinks()}

@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import DrawerToggleButton from './SideDrawer/DrawerToggle';
 import "../style/myStyles/_header.scss";
 const logo = require('../img/orginal50x50.png');
 
 
  class Header extends Component {
 
+
+      showSettings (event) {
+            event.preventDefault();
+            
+          }
 
       renderLinks() {
 
@@ -29,7 +35,7 @@ const logo = require('../img/orginal50x50.png');
                   // Show a link to sign in or sign up.
                   return [
                         <li className="links--item" key={1}>
-                          <Link className="links--item__a color-white" to="/" > Forsíða </Link>
+                          <Link className="links--item__a color-white " to="/" > Forsíða </Link>
                         </li>,
                         <li className="links--item" key={2}>
                           <Link className="links--item__a color-white" to="/frodleikur" > Fróðleikur </Link>
@@ -47,18 +53,23 @@ const logo = require('../img/orginal50x50.png');
        render() {
              return (
                    <div className="header">
-                     <div className="header--container">
-                       <Link to="/" className="header--block">
-                              <div className="header--block__image">
-                                    <img alt="Logo" src={logo}  /> 
-                              </div>
-
-                              <div className="header--block__title"><h1>Landbúnaðarsafn Íslands </h1></div>
-                        </Link>
+                        <div className="header--container">
+                              <Link to="/" className="header--block">
+                                    <div className="header--block__image">
+                                          <img alt="Logo" src={logo}  /> 
+                                    </div>
+                                    <div className="header--block__title"><h1>Landbúnaðarsafn Íslands </h1></div>
+                              </Link>
                         </div>
                        <ul className="links ">
-                         {this.renderLinks()}
+                              {this.renderLinks()}
                        </ul>
+
+                       <div className="header--burger">
+                             <DrawerToggleButton click={this.props.drawerClickHandler} />
+                       </div>
+
+                       
                    </div>
              )
        }
