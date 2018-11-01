@@ -45,7 +45,7 @@ import config from '../config';
             });
       }
       render() {
-            const ROOT_URL = `${config.slod}/image`;
+            const ROOT_URL = `${config.images}`;
             if(!this.props.post  || this.props.post._id !== this.props.params.id) {
                   return <div className="post-loading"> Loading..</div>
             }    
@@ -89,6 +89,7 @@ import config from '../config';
                                                                                                 </div>
                                                                                                 <div className="post--component__picContainer-map">
                                                                                                 { this.props.post.filePath.map(value => {
+                                                                                                      console.log(value)
                                                                                                       return(
                                                                                                       <div className="post--component__picContainer-map__divs"> 
                                                                                                             <img 

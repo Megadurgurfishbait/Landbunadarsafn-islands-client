@@ -40,12 +40,12 @@ class MyPictures extends Component {
       }
       render() {
         
-            const ROOT_URL = `${config.slod}/image`;
+            const ROOT_URL = `${config.images}`;
             const {images} = this.props;
             if(!images){
                   return <div> Er að hugsa, bíddu í augnablik.  </div>
             }
-            console.log(this.state.selectedImages);
+            console.log(images);
             return (
                   <div className="myPictures">
                          <h1>Yfirlit yfir myndir í myndasafni.</h1>
@@ -56,8 +56,8 @@ class MyPictures extends Component {
                                     <div className="myPictures--container__card" key={values._id}>
                                     <input className="myPictures--container__card--input" type="checkbox" id={values._id} onChange={this.handleCheckboxChange} />
                                           <label htmlFor={values._id} className="myPictures--container__card--label"></label>
-                                                <img alt="myndir í safni" className = "myPictures--container__card--image"src={`${ROOT_URL}/${values.filename}`}/> 
-                                          
+                                                <img alt="myndir í safni" className = "myPictures--container__card--image"src={`${ROOT_URL}/${values.Key}`}/> 
+                                                {console.log(`${ROOT_URL}/${values.key}`)}
                                     </div>
                                     )
                               })}

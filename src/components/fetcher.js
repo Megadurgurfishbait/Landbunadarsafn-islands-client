@@ -4,7 +4,7 @@ import "../style/myStyles/_fetcher.scss";
 import config from '../config';
 
 
-const ROOT_URL = `${config.slod}/image`;
+const ROOT_URL = `${config.images}`;
 // Stöðluð mynd ef að það fylgir ekki mynd með frétt
 // Type OldNews: Sýnir lista með Dagsetningu, nafn á frétt og takkann "Sjá eldri fréttir"
 // Type Null: Sýnir fréttir á forsíðu með dagsetningu, mynd, lesa meira hover og nafn á frétt.

@@ -7,7 +7,7 @@ class showtimeModal extends Component {
             this.props.onClose && this.props.onClose(e);
       }
       render() {
-            const ROOT_URL = `${config.slod}/image`;
+            const ROOT_URL = `${config.images}`;
             if(!this.props.show){
                   return null;
             }

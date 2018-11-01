@@ -163,6 +163,7 @@ export function fetchImages() {
             axios.get(`${ROOT_URL}/files`,{
             })
             .then(response => {
+                  
                   dispatch({
                         type: ALL_IMAGES,
                         payload: response.data

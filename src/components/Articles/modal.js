@@ -30,6 +30,7 @@ class Modal extends Component {
             this.props.onClose && this.props.onClose(e);
       }
       handleChange = (e) =>{
+            console.log(e.target.id);
            if(this.props.type === "radio"){
                  this.setState({
                        headlineImg: e.target.id
@@ -63,7 +64,7 @@ class Modal extends Component {
       render() {
 
            const { images } = this.props;
-           const ROOT_URL = `${config.slod}/image`;
+           const ROOT_URL = `${config.images}`;
             
             if(!this.props.show || !images){
                   return null;
@@ -74,13 +75,14 @@ class Modal extends Component {
                         <h3 className="myModal--headline">Velja mynd</h3>
                         <form onSubmit={this.handleSubmit} >
                               <div className="myModal--display">
-                              {images.map((value) => {
+                              {images.slice(1).map((value) => {
+                                    console.log(value);
                                     return (
                                           <ModalImage 
                                           type = {this.props.type}
-                                          key = {value._id}
-                                          id = {value.filename}
-                                          path={`${ROOT_URL}/${value.filename}`}
+                                          key = {value.ETag}
+                                          id = {value.Key}
+                                          path={`${ROOT_URL}/${value.Key}`}
                                           onHandleChange={this.handleChange}
                                           />
                                     )
