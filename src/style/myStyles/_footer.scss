@@ -42,18 +42,16 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            border-bottom: solid 1px black;
+            border-bottom: solid 1px white;
             
             @media (max-width: $bp-tab-port){
                   width: 35%;
                   border-bottom: none;
-            
             }
 
             @media (max-width: $bp-phone){
                   margin: .5rem 0rem;
                   width: 60%;
-            
             }
 
             & > svg {
@@ -69,7 +67,6 @@
                   height: 40px;
                   width: 55px;
                   }
-
             }
 
 
