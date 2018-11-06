@@ -52,6 +52,7 @@ class MyPictures extends Component {
                         <p> Hakaðu við þær myndir sem að þú vilt eyða. </p>
                         <div className="myPictures--container">
                               {images.map((values) => {
+                                    console.log(values, "Values");
                                     return (
                                     <div className="myPictures--container__card" key={values._id}>
                                     <input className="myPictures--container__card--input" type="checkbox" id={values._id} onChange={this.handleCheckboxChange} />

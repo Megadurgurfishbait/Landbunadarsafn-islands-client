@@ -66,8 +66,15 @@ $navcolor: #5d000a;
             }
       }
 
-      background-color: #5d000a;
-
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8f0222+0,5d000a+100 */
+background: #8f0222; /* Old browsers */
+background: -moz-linear-gradient(top, #8f0222 0%, #5d000a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #8f0222 0%,#5d000a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #8f0222 0%,#5d000a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f0222', endColorstr='#5d000a',GradientType=0 ); /* IE6-9 */
+      -webkit-box-shadow: 4px 5px 32px -2px rgba(0,0,0,0.75);
+      -moz-box-shadow: 4px 5px 32px -2px rgba(0,0,0,0.75);
+      box-shadow: 4px 5px 32px -2px rgba(0,0,0,0.75);
       width: 100vw;
       height: 8vh;
       min-height: 2rem;
@@ -80,7 +87,7 @@ $navcolor: #5d000a;
       letter-spacing: .5px;
       font-variant: small-caps;
       justify-content: space-between;
-      
+      color: white;
 
 
 

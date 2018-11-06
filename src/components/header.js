@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import DrawerToggleButton from './SideDrawer/DrawerToggle';
 import "../style/myStyles/_header.scss";
-const logo = require('../img/Lbs_logo_trans.gif');
+const logo = require('../img/Lbs_logo_trans_hvitt.gif');
 
 
  class Header extends Component {
