@@ -1,11 +1,9 @@
-$navcolor: papayawhip;
+$navcolor: #5d000a;
 
 @import 'base';
 
 
 .header {
-
-
       &--burger {
             display: flex;
             justify-content: center;
@@ -33,7 +31,7 @@ $navcolor: papayawhip;
 
             &__title {
                   display: flex;
-                  color: black;
+                  color: #5d000a;
                   height: 100%;
                   align-items: center;
                   justify-content: center;
@@ -183,7 +181,7 @@ $navcolor: papayawhip;
 }
 
 .color-white{
-      color:#000000 !important;
+      color: white !important;
       font-weight: bolder;
       font-size: 22px;
       z-index: 1000000;
@@ -214,7 +212,7 @@ $navcolor: papayawhip;
             }
 
             &__a {
-                  color:#000000 !important;
+                  color:#5d000a !important;
                   text-transform: lowercase;
                   font-weight: bolder;
                   font-size: 22px;

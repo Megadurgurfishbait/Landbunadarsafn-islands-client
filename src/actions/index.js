@@ -22,12 +22,11 @@ const ROOT_URL = config.slod;
 
 
 export function signInUser({email, password}){
-
       return function(dispatch) {
             dispatch({ type: arguments})
-            console.log(email)
             axios.post(`${ROOT_URL}/signin`, {email, password})
                   .then(response => {
+
                         // If request is good...
                         // - Update state to indicate user is authenticated
                         dispatch({ type: AUTH_USER })
@@ -46,11 +45,9 @@ export function signInUser({email, password}){
 }
 
 export function signupUser({email, password}){
-      console.log(password);
       return function(dispatch){
             axios.post(`${ROOT_URL}/signup`, {email, password})
                   .then(response => {
-                        console.log("then");
                         dispatch({type: AUTH_USER});
                         localStorage.setItem('token', response.data.token);
                         browserHistory.push('/feature');
