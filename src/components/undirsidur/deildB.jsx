@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import  Icons from "../../img/sprites.svg";
 import './deildir.scss';
 import config from '../../config';
+import pdf from '../../img/Skra_0060036.pdf';
 
 export default class deildA extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ export default class deildA extends Component {
                                           <span className="deildir--article__info--author">{value.author}</span>
                                           <span className="deildir--article__info--date">{value.date}</span>
                                     </div>
-                                    <a className="deildir--article__icons" href={`${ROOT_URL}${value.link}`}>
+                                    <a className="deildir--article__icons" href={pdf}>
                                           <svg>
                                                 <use xlinkHref={`${Icons}#icon-text-document`}></use>
                                           </svg>
