@@ -26,7 +26,7 @@
       &--link {
             flex: 1 0 100%;
             text-align: center;
-            height: 100%;
+
 
 
             & > h4 {
@@ -63,7 +63,7 @@
 
 
             &__title {
-                  overflow: hidden;
+
                   display: flex;
                   flex-direction: column;
                   font-size: 4rem;
@@ -116,7 +116,7 @@
                   text-align: justify;
                   white-space: pre-line;
                   font-size: 1.2rem;
-                  
+                  word-wrap: normal;
 
                   @media (max-width: $bp-tab-port){
                         font-size: .8rem;
@@ -150,7 +150,6 @@
                         flex-direction: row;
                         flex-wrap: wrap;
                         justify-content: space-around;
-                        height: 100%;
 
                         &__divs {
                               
@@ -167,7 +166,6 @@
             &__textContainer {
                   flex: 1 0 100%;
                   text-align: center;
-                  height: 100%;
                   & > h4 {
                         border-radius: 8px;
                         background-color: #D4D2D2;
