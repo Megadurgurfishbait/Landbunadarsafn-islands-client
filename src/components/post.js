@@ -82,14 +82,13 @@ import config from '../config';
                               </div>
                         </Portal>
                         : null }
-                        {console.log("Props", this.props.post.filePath.length)}
+
                         {this.props.post.filePath.length !== 0 ? <Fragment>
                                                                                                 <div className="post--component__textContainer">
                                                                                                       <h4> Fylgimyndir fréttar</h4>
                                                                                                 </div>
                                                                                                 <div className="post--component__picContainer-map">
                                                                                                 { this.props.post.filePath.map(value => {
-                                                                                                      console.log(value)
                                                                                                       return(
                                                                                                       <div className="post--component__picContainer-map__divs"> 
                                                                                                             <img 
@@ -114,7 +113,6 @@ import config from '../config';
 }
 
 function mapStateToProps(state){
-      console.log(state.auth.post)
       return {
             post: state.auth.post,
             authenticated: state.auth.authenticated
