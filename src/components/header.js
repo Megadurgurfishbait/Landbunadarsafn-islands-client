@@ -21,15 +21,9 @@ const logo = require('../img/Lbs_logo_trans_hvitt.gif');
                   <li className="nav-item" key={3}>
                         <Link className="nav-link color-white" to="/signout">Skra mig ut</Link>
                   </li>,
-                  <li className="nav-item"key={6}>
-                        <Link className="nav-link color-white" to="/myndasafn">Myndasafn</Link>
-                  </li>,
                   <li className="nav-item"key={7}>
                         <Link className="nav-link color-white" to="/feature"> Skrifa grein </Link>
-                  </li>,
-                  <li className="nav-item"key={8}>
-                        <Link className="nav-link color-white" to="/addevent"> Add event </Link>
-                  </li>
+                  </li> 
                   ];
             }else {
                   // Show a link to sign in or sign up.
