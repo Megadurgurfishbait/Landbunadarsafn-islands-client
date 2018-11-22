@@ -6,6 +6,7 @@
             flex-direction: row;
             height: 100%;
             margin: 2rem 0rem;
+            cursor: pointer;
             &__info {
                   display: flex;
                   flex: 1 1 70%;
@@ -21,6 +22,8 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                  z-index: 1550000;
+                  
                   & > svg {
                         fill: gray;
                         height: 40px;

@@ -11,6 +11,7 @@ const ROOT_URL = `${config.images}`;
 const Fetcher = (props) => 
       <div className={props.className}>
       {props.array ? (props.array.map(value => {
+
             return (
                   <li className={props.className + "--card"} key={value._id}>
                         <Link tabIndex="1" className={props.className + "--card__link"} to={`/${props.path}/${value._id}`  } bull={value._id}>

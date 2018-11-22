@@ -40,13 +40,18 @@ export default class KnowledgeLinks extends Component {
     }
   }
   componentDidUpdate = () => {
-      const myDomNode = ReactDOM.findDOMNode(this.myRef)
-      window.scrollTo({
-            top: myDomNode.offsetTop-80,
-            behavior: "smooth"
-      });
 
+
+      const myDomNode = ReactDOM.findDOMNode(this.myRef);
+      console.log(myDomNode);
+      if(myDomNode != null ){
+            window.scrollTo({
+                  top: myDomNode.offsetTop-80,
+                  behavior: "smooth"
+            });
+      }
   }
+  
 
 
 

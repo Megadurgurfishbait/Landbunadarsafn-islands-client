@@ -115,9 +115,23 @@ export function sendPost({title, text, headingPath, filePath, createdAt}, callba
 }
 
 export function fetchPost() {
-
       return function(dispatch){
             axios.get(`${ROOT_URL}/posts`,{
+            })
+            .then(response => {
+                  
+                  dispatch({
+                        type: FETCH_POST,
+                        payload: response.data
+                  });
+            });
+      }
+}
+
+export function fetchFrontPost() {
+
+      return function(dispatch){
+            axios.get(`${ROOT_URL}/frontPosts`,{
             })
             .then(response => {
                   dispatch({

@@ -27,7 +27,7 @@ export default class Knowledge extends Component {
             <button id="Stuttmyndir" onClick={this.handleOnClick}>Stuttmyndir</button>
       </li>,
      <li className="knowledgeContainer--links__li" key={4}>
-            <button id="Arsreikningur" onClick={this.handleOnClick}>Ársreikningar</button>
+            <button id="Arsreikningur" onClick={this.handleOnClick}>Ársskýrslur</button>
       </li>,
       <li className="knowledgeContainer--links__li" key={5}>
              <button id="Mjolkurskolinn" onClick={this.handleOnClick}>Mjólkurskólinn</button>

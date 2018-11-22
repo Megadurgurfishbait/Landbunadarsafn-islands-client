@@ -10,17 +10,17 @@ import "../style/myStyles/_images.scss";
 class Images extends Component{
 
       componentWillMount(){
-            this.props.fetchPost();
+            this.props.fetchFrontPost();
 
       }
 
       // Render'ar fréttir fyrir forsíðu. Viljum aðeins sýna fyrstu 5 fréttirnar.
       // Loadum síðan fleiri myndir með "Eldri Fréttir" takkanum.
       renderMyLink = () => {
+
             return (
                   <div className="relative">
-                        <Fetcher className="posts" path="post" array = {this.props.posts.slice(0,4)} />
-
+                        <Fetcher className="posts" type="front" path="post" array = {this.props.posts} />
                   </div>
             )
       }
