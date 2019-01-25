@@ -15,14 +15,13 @@ class OldNews extends Component {
       renderMyLink = () =>{
             return (
                   <div className="relative-oldNews">
-                        <Fetcher className="oldNews" path="post" type="oldNews" array = {this.props.posts} />
+                        <Fetcher className="oldNews" path="frettir" type="oldNews" array = {this.props.posts} />
                   </div>
             )
       }
 
       render() {
             const {posts} = this.props;
-            console.log(posts);
             return (
                   <div>
                   <Portal>

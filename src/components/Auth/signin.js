@@ -38,16 +38,16 @@ class Signin extends Component {
             const { handleSubmit, fields:  {email, password }} = this.props;
 
             return (
-                  <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                  <form style={{margin: "1rem"}} onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                         <fieldset className="form-group">
-                              <label>Email:</label>
+                              <label style={{color:"black"}}>Email:</label>
                               <Field
                               name="email"
                               component={renderInput}
                               type="text" />
                         </fieldset>
                         <fieldset className="form-group">
-                              <label>Password:</label>
+                              <label style={{color:"black"}}>Password:</label>
                               <Field
                               name="password"
                               component={renderInput}

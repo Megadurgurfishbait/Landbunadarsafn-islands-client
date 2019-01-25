@@ -8,13 +8,13 @@ const ROOT_URL = `${config.images}`;
 // Stöðluð mynd ef að það fylgir ekki mynd með frétt
 // Type OldNews: Sýnir lista með Dagsetningu, nafn á frétt og takkann "Sjá eldri fréttir"
 // Type Null: Sýnir fréttir á forsíðu með dagsetningu, mynd, lesa meira hover og nafn á frétt.
-const Fetcher = (props) => 
+const Fetcher = (props) => (
       <div className={props.className}>
       {props.array ? (props.array.map(value => {
 
             return (
-                  <li className={props.className + "--card"} key={value._id}>
-                        <Link tabIndex="1" className={props.className + "--card__link"} to={`/${props.path}/${value._id}`  } bull={value._id}>
+                  <div className={props.className + "--card"} key={value._id}>
+                        <Link className={props.className + "--card__link"} to={`/${props.path}/${value._id}`  } bull={value._id}>
                                {props.type !== "oldNews" ? <div className="overlay">
                                                                               <div className="text">Lesa meira</div>
                                                                               </div> 
@@ -26,16 +26,18 @@ const Fetcher = (props) =>
                                     {props.type === "oldNews" ? <h3 className={props.className + "--card__see"}>Sjá Frétt</h3>
                                                                                       : null}
                                     <h1 className={props.className + "--card__title"}>{value.title}</h1>
-                                    {props.type !== "oldNews" ? <h4 className={props.className + "--card__textbox__text"}>{value.text}</h4> 
+                                    {props.type !== "oldNews" ? <h4 className={props.className + "--card__textbox__text"} dangerouslySetInnerHTML={{
+                                          __html: value.text
+                                    }}></h4> 
                                                                                     :null }
                                     <h3 className={props.className + "--card__date"}>{value.createdAt}</h3>
                               </div>
                         </Link>
-                  </li>
+                  </div>
 
             )})): 
             <div> Loading..</div>}
       </div>
-
+);
 
 export default Fetcher;

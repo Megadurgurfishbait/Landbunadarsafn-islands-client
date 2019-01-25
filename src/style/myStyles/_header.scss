@@ -24,6 +24,11 @@ $navcolor: #5d000a;
             justify-content: left;
             padding: 0;
             margin: 0;
+            color: white;
+
+            &:focus {
+                  text-decoration: none;
+            }
             
             &:hover {
                   text-decoration: none;
@@ -31,13 +36,28 @@ $navcolor: #5d000a;
 
             &__title {
                   display: flex;
-                  color: white;
                   height: 100%;
                   align-items: center;
                   justify-content: center;
-                  & > h1 {
+
+
+                  &__h1 {
                         margin: 0rem 1rem;
                         font-size: 1.5rem;
+                        color: white !important;
+                        border-bottom: 1px solid transparent;
+
+                        
+                        &:active,
+                        &:visited,
+                        &:focus {
+                              outline: none;
+                              border-bottom: white 1px solid !important;
+                        }
+
+                        &:hover{
+                              border-bottom: white 1px solid;
+                        }
 
                         @media (max-width: $bp-tab-port){
                               font-size: 1.1rem;

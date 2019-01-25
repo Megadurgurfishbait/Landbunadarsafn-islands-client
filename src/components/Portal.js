@@ -1,6 +1,5 @@
 import  { Component } from 'react';
 import ReactDOM from 'react-dom';
-
 import "../style/myStyles/_portal.scss";
 
 

@@ -19,10 +19,10 @@ const logo = require('../img/Lbs_logo_trans_hvitt.gif');
             if(this.props.authenticated){
                   return  [
                   <li className="nav-item" key={3}>
-                        <Link className="nav-link color-white" to="/signout">Skra mig ut</Link>
+                        <Link className="nav-link color-white" to="/skraut">Skra mig ut</Link>
                   </li>,
                   <li className="nav-item"key={7}>
-                        <Link className="nav-link color-white" to="/feature"> Skrifa grein </Link>
+                        <Link className="nav-link color-white" to="/skrafrett"> Skrifa grein </Link>
                   </li> 
                   ];
             }else {
@@ -52,7 +52,7 @@ const logo = require('../img/Lbs_logo_trans_hvitt.gif');
                                     <div className="header--block__image">
                                           <img alt="Logo" src={logo}  /> 
                                     </div>
-                                    <div className="header--block__title"><h1>Landbúnaðarsafn Íslands </h1></div>
+                                    <div className="header--block__title"><h1 className="header--block__title__h1">Landbúnaðarsafn Íslands </h1></div>
                               </Link>
                         </div>
                        <ul className="links ">

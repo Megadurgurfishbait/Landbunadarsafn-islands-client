@@ -1,16 +1,12 @@
 export const AUTH_USER = 'auth_user';
 export const UNAUTH_USER = 'unauth_user';
 export const AUTH_ERROR = 'auth_error';
-export const FETCH_MESSAGE = 'fetch_message';
 export const SEND_POST = 'send_post';
 export const FETCH_POST = 'fetch_post';
 export const SINGLE_POST = 'single_post';
 export const DELETE_POST = 'delete_post';
 export const ALL_IMAGES = 'all_images';
 export const DELETE_IMAGE = 'delete_image';
-export const DELETE_IMAGE_CHUNKS = 'delete_image_chunks';
-export const FRONTPAGE_IMAGES = 'frontpage_images';
-export const GET_FRONTPAGE_IMAGES = 'get_frontpage_images';
-export const DELETE_FRONTPAGE_IMAGE = 'delete_frontpage_image';
-export const ADD_EVENT = 'add_event';
-export const GET_EVENTS = 'get_events';
+
+
+

@@ -49,9 +49,9 @@
       order: -1;
       align-items: left;
       display: flex;
-      flex: 1 1 30%;
+      flex: 1 1 35%;
       height: 100%;
-      padding: 2rem 3rem;
+      padding: 2rem 1.4rem;
 
       @media (max-width: $bp-tab-port){
             align-items: left;
@@ -87,8 +87,12 @@
       }
 
 
-      & > button:hover {
-            font-weight: 800;
+      & > button {
+            transition: transform 1s ease;
+
+            &:hover {
+                  transform: translateX(20px);
+            }
       }
 
       &:last-child{
@@ -98,7 +102,7 @@
 
 
       &__li {
-
+            transition: transform 1s ease;
             font-size: 1.2rem;
             list-style-type: none;
             border-bottom: none;
@@ -109,11 +113,14 @@
             border-bottom: 1px solid black;
             
             & > a {
+
+                  transition: transform 1s ease;
                   text-decoration: none;
                   color: black;
                   cursor: pointer;
                   &:hover {
-                        font-weight: 800;
+
+                        transform: translateX(20px);
                   }
                   
             }
@@ -163,9 +170,11 @@
 
 .item > label:hover {
       cursor: pointer;
+      transform: translateX(20px);
 }
 
 .item {
+      
       display: flex;
       flex-flow: wrap row;
       justify-content: space-between;
@@ -177,12 +186,10 @@
 
       & > label {
             margin: 0;
-
+            transition: transform 1s ease;
+      
             
 
-            &:hover {
-                  font-weight: 800;
-            }
       }
 
       & > svg {

@@ -12,36 +12,20 @@ import DeildB from './undirsidur/deildB';
 import "../style/myStyles/_knowledgeLinks.scss";
 
 export default class KnowledgeLinks extends Component {
-
   renderMyText = () => {
-    if(this.props.show === "Arsreikningur"){
-      return (<Arsreikningur />);
-    }
-    if(this.props.show === "Mjolkurskolinn"){
-      return (<Mjolkurskolinn />)
-    }
-    if(this.props.show === "Stuttmyndir"){
-      return (<Stuttmyndir />)
-    }
-    if(this.props.show === "Velunnarar"){
-      return (<Velunnarar />)
-    }
-    if(this.props.show === "Vefrit"){
-      return (<Vefrit />)
-    }
-    if(this.props.show === "deildA"){
-      return (<DeildA />)
-    }
-    if(this.props.show === "deildB"){
-      return (<DeildB />)
-    }
-    if(this.props.show === "Umsafnid"){
-      return (<UmSafnid />)
+    switch(this.props.show){
+            case "Arsreikningur": return <Arsreikningur />;
+            case "Mjolkurskolinn": return <Mjolkurskolinn />;
+            case "Stuttmyndir": return <Stuttmyndir />;
+            case "Velunnarar": return <Velunnarar />;
+            case "Vefrit": return <Vefrit/>;
+            case "deildA": return <DeildA />;
+            case "deildB": return <DeildB />;
+            case "Umsafnid": return <UmSafnid />;
+            default: return <UmSafnid />;
     }
   }
   componentDidUpdate = () => {
-
-
       const myDomNode = ReactDOM.findDOMNode(this.myRef);
       console.log(myDomNode);
       if(myDomNode != null ){
@@ -51,10 +35,6 @@ export default class KnowledgeLinks extends Component {
             });
       }
   }
-  
-
-
-
   render() {
     if(!this.props.show){
       return (

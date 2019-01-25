@@ -17,10 +17,9 @@ class Images extends Component{
       // Render'ar fréttir fyrir forsíðu. Viljum aðeins sýna fyrstu 5 fréttirnar.
       // Loadum síðan fleiri myndir með "Eldri Fréttir" takkanum.
       renderMyLink = () => {
-
             return (
                   <div className="relative">
-                        <Fetcher className="posts" type="front" path="post" array = {this.props.posts} />
+                        <Fetcher className="posts" type="front" path="frettir" array = {this.props.posts} />
                   </div>
             )
       }
@@ -38,7 +37,7 @@ class Images extends Component{
                   </div>
                   </Portal>
 
-                  {posts ? this.renderMyLink(): <div> Loading</div>}
+                  {posts ? this.renderMyLink(): <div> Hleður </div>}
                   <Link className="images--seeMore" to="/eldrifrettir">
                         <h3> 
                               Sjá eldri fréttir
@@ -54,9 +53,7 @@ class Images extends Component{
 function mapStateToProps(state) {
 
       return {
-            posts: state.auth.posts,
-            events : state.event.events
-
+            posts: state.auth.posts
       };
 }
 

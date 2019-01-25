@@ -34,7 +34,7 @@ const Footer = (props) =>
                         <svg>
                               <use xlinkHref={`${Icons}#icon-location-pin`}></use>
                         </svg>
-                        <span className="footer-list-items-text">
+                        <span className="footer-list-items-text special">
                               Hvanneyri 311 Borgarnes
                         </span>
                   </li>

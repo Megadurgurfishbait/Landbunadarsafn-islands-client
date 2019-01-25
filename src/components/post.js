@@ -5,7 +5,7 @@ import { Link, browserHistory } from 'react-router';
 import Portal from './Portal';
 import "../style/myStyles/_post.scss";
 import config from '../config';
-
+import draftToHtml from 'draftjs-to-html';
 
  class Post extends Component {
       
@@ -67,7 +67,7 @@ import config from '../config';
                                           value={this.props.post.text}
                                           onChange={this.handleOnChange}></textarea>
                                           :
-                                    <p className="post--component__text">{this.props.post.text}</p> }
+                                    <p className="post--component__text" dangerouslySetInnerHTML={{__html: this.props.post.text}}></p> }
 
                               </div>
 
@@ -87,19 +87,20 @@ import config from '../config';
                                                                                                 <div className="post--component__textContainer">
                                                                                                       <h4> Fylgimyndir fréttar</h4>
                                                                                                 </div>
-                                                                                                <div className="post--component__picContainer-map">
-                                                                                                { this.props.post.filePath.map(value => {
-                                                                                                      return(
-                                                                                                      <div className="post--component__picContainer-map__divs"> 
-                                                                                                            <img 
-                                                                                                            alt="aukamynd"
-                                                                                                            key={value}
-                                                                                                            src={`${ROOT_URL}/${value}`}
-                                                                                                            />
 
-                                                                                                      </div>)
-                                                                                                })}
-                                                                                                </div>
+                                                                                                      <div className="post--component__picContainer-map">
+                                                                                                      { this.props.post.filePath.map(value => {
+                                                                                                            return(
+                                                                                                            <div className="post--component__picContainer-map__divs"> 
+                                                                                                                  <img 
+                                                                                                                  alt="aukamynd"
+                                                                                                                  key={value}
+                                                                                                                  src={`${ROOT_URL}/${value}`}
+                                                                                                                  />
+
+                                                                                                            </div>)
+                                                                                                      })}
+                                                                                                      </div>
                                                                                                 </Fragment> 
                                                                                           :null }
                         <Link className="post--link" to="/"> <h4> Til baka á upphafssíðu </h4> </Link>

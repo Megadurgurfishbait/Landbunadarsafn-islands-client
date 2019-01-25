@@ -30,7 +30,7 @@ class Modal extends Component {
             this.props.onClose && this.props.onClose(e);
       }
       handleChange = (e) =>{
-            console.log(e.target.id);
+
            if(this.props.type === "radio"){
                  this.setState({
                        headlineImg: e.target.id
@@ -76,7 +76,6 @@ class Modal extends Component {
                         <form onSubmit={this.handleSubmit} >
                               <div className="myModal--display">
                               {images.slice(1).map((value) => {
-                                    console.log(value);
                                     return (
                                           <ModalImage 
                                           type = {this.props.type}
@@ -89,8 +88,8 @@ class Modal extends Component {
                               })}
                               </div>
                         <div className="myModal--btn">
-                              <input className="feature--btn" type="submit" value="Velja mynd"/> 
-                              <button className="feature--btn" onClick={(e) => { this.onClose(e)}  }> Loka </button> 
+                              <input className="feature--btn myModal--btn--fat" type="submit" value="Velja mynd"/> 
+                              <button className="feature--btn myModal--btn--fat" onClick={(e) => { this.onClose(e)}  }> Loka </button> 
                         </div>
                          </form>
 

@@ -16,13 +16,10 @@ import RequireAuth from './components/Auth/require_auth';
 import { AUTH_USER } from './actions/types';
 import images from './components/images';
 import Post from './components/post';
-import MyPictures from './components/myPictures';
-import addEvent from './components/addEvent';
 import changeArticle from './components/changeArticle';
 import knowledge from './components/knowledge';
 import English from './components/undirsidur/english';
 import Opnunartimi from './components/undirsidur/opnunartimar';
-import Vefrit from './components/undirsidur/vefrit';
 import OldNews from './components/oldNews';
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
@@ -38,19 +35,17 @@ ReactDOM.render(
     <Router onUpdate={() => window.scrollTo(0, 0)}  history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={images} />
-        <Route path="addevent" component={addEvent} />
-        <Route path="signin" component={signin}/>
-        <Route path="signout" component={Signout}/>
-        <Route path="signup" component={Signup}/>
-        <Route path="feature" component={RequireAuth(Feature)}/>
-        <Route path="post/:id" component={Post} />
-        <Route path="myndasafn" component={RequireAuth(MyPictures)}/>
+        <Route path="skrainn" component={signin}/>
+        <Route path="skraut" component={Signout}/>
+      {/*<Route path="skramig" component={Signup}/> */}
+        <Route path="skrafrett" component={RequireAuth(Feature)}/>
+        <Route path="frettir/:id" component={Post} />
         <Route path="changeArticle/:id" component={changeArticle}/>
         <Route path="frodleikur" component={knowledge}/>
         <Route path="english" component={English} />
         <Route path="opnunartimar" component={Opnunartimi} />
-        <Route path="vefrit" component={Vefrit} />
         <Route path="eldrifrettir" component={OldNews} />
+        <Route component={images} />
       </Route>
     </Router>
   </Provider>
