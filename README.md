@@ -17,3 +17,5 @@ Kláraði hana á 3 mánuðum, ákvað svo að hún væri ekki nógu vel forritu
 um það bil 2 mánuðum.
 
 
+## Afhverju?
+Afi minn hefur séð um Landbúnaðarsafnið síðustu ár og fyrirtækið sem að hefur séð um síðuna og hýst hana er við það að leggja upp laupana og hefur ekkert sinnt henni í tvö ár. Ekki var hægt að setja neitt nýtt efni inn á hana sökum þess. Því lá við að ég myndi reyna að bjarga því efni sem að var nú þegar á síðunni og bæta útlit og aðgengi.
