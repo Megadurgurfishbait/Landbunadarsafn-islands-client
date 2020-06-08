@@ -33,7 +33,7 @@ const Opnunartimi = () =>
                         <use xlinkHref={`${Icons}#icon-credit-card`}></use>
                   </svg>
                   <span>
-                        Almennur aðgangseyrir að safninu er: 1.200 kr. fyrir fullorðna (og í hópum sem sérstök leiðsögn er veitt); 1000 kr. fyrir öryrkja og eldri borgara ókeypis er fyrir 14 ára og yngri í fylgd fullorðinna.
+                        Almennur aðgangseyrir að safninu er: 1.400 kr. fyrir fullorðna (og í hópum sem sérstök leiðsögn er veitt); 1100 kr. fyrir öryrkja og eldri borgara ókeypis er fyrir 14 ára og yngri í fylgd fullorðinna.
                   </span>
             </div>
             <div className="default--paragraph--block">

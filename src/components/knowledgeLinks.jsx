@@ -8,8 +8,9 @@ import Velunnarar from './undirsidur/velunnarar';
 import Vefrit from './undirsidur/vefrit';
 import DeildA from './undirsidur/deildA';
 import DeildB from './undirsidur/deildB';
-
+import Hvanneyri from './undirsidur/hvanneyri';
 import "../style/myStyles/_knowledgeLinks.scss";
+
 
 export default class KnowledgeLinks extends Component {
   renderMyText = () => {
@@ -22,6 +23,7 @@ export default class KnowledgeLinks extends Component {
             case "deildA": return <DeildA />;
             case "deildB": return <DeildB />;
             case "Umsafnid": return <UmSafnid />;
+            case "Hvanneyri": return <Hvanneyri />;
             default: return <UmSafnid />;
     }
   }

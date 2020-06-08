@@ -10,8 +10,8 @@ const Footer = (props) =>
                               <use xlinkHref={`${Icons}#icon-clock`}></use>
                         </svg>
                         <span className="footer-list-items-text1">
-                              Sumaropnun: júní - ágúst, frá kl. 11:00 - 17:00
-                              Vetraropnun: eftir samkomulagi
+                              Sumaropnun: júní - ágúst, frá kl. 11:00 - 17:00< br></br>
+                              Vetraropnun: fimmtudag - laugardag frá kl: 13:00-17:00
                         </span>
                   </li>
                   <li className="footer-list-items">
