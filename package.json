@@ -57,7 +57,7 @@
     "raf": "3.4.0",
     "react": "^16.0.0",
     "react-burger-menu": "^2.5.4",
-    "react-dev-utils": "^5.0.2",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.5.2",
     "react-draft-wysiwyg": "^1.12.13",
     "react-lazy-load": "^3.0.13",
